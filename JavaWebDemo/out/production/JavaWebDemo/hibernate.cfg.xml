@@ -4,9 +4,11 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/demo</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/bulletin</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <mapping class="com.tomax.entity.UserEntity"/>
+        <mapping class="cn.vfvrpq.entity.NoteEntity"/>
+        <mapping class="cn.vfvrpq.entity.UserEntity"/>
+        <mapping class="cn.vfvrpq.entity.UserNoteEntity"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -14,14 +14,20 @@
     
     <package name="new" namespace="/" extends="json-default">
         <action name="user_*" class="userAction" method="{1}">
-            <result name="REGISTER_SUCCESS">
-                login.jsp
+            <result name="REGISTER_SUCCESS" type="json">
+                <param name="root">result</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
             </result>
-            <result name="LOGIN_SUCCESS">
-                index.jsp
+            <result name="LOGIN_SUCCESS" type="json">
+                <param name="root">result</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
             </result>
-            <result name="LOGIN_FAIL">
-                fail.jsp
+            <result name="EXIST_SUCCESS" type="json">
+                <param name="root">result</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
             </result>
         </action>
     </package>

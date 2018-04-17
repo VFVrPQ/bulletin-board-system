@@ -6,7 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <context:property-placeholder location="classpath:dbcp2.properties"/>
-    <context:component-scan base-package="com.tomax"></context:component-scan>
+    <context:component-scan base-package="cn.vfvrpq"></context:component-scan>
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="username" value="${connection.username}"></property>
         <property name="password" value="${connection.password}"></property>
@@ -46,7 +46,7 @@
     <!-- 切面： 将切入点与通知关联-->
     <aop:config proxy-target-class="true">
         <aop:pointcut id="personServiceOperation"
-                      expression="execution(* com.tomax..*(..))" />
+                      expression="execution(* cn.vfvrpq..*(..))" />
         <aop:advisor advice-ref="txAdvice" pointcut-ref="personServiceOperation"/>
     </aop:config>
 

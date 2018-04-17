@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="demo@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+<dataSource name="bulletin@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
     <root id="1"/>
-    <schema id="2" parent="1" name="demo">
+    <schema id="2" parent="1" name="information_schema"/>
+    <schema id="3" parent="1" name="mysql"/>
+    <schema id="4" parent="1" name="performance_schema"/>
+    <schema id="5" parent="1" name="bulletin">
       <Current>1</Current>
-      <Visible>1</Visible>
     </schema>
-    <schema id="3" parent="1" name="book"/>
-    <schema id="4" parent="1" name="borrowbook"/>
-    <schema id="5" parent="1" name="information_schema"/>
-    <schema id="6" parent="1" name="meeting"/>
-    <schema id="7" parent="1" name="mydb"/>
-    <schema id="8" parent="1" name="mysql"/>
-    <schema id="9" parent="1" name="performance_schema"/>
-    <schema id="10" parent="1" name="test"/>
-    <schema id="11" parent="1" name="weprocess"/>
-    <table id="12" parent="2" name="user"/>
-    <column id="13" parent="12" name="name">
-      <Position>1</Position>
-      <DataType>varchar(64)|0</DataType>
-    </column>
-    <column id="14" parent="12" name="password">
-      <Position>2</Position>
-      <DataType>varchar(18)|0</DataType>
-    </column>
+    <schema id="6" parent="1" name="sport"/>
+    <schema id="7" parent="1" name="sys"/>
   </database-model>
 </dataSource>
