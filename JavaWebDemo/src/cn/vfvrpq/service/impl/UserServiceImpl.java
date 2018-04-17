@@ -16,8 +16,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean addData(UserEntity userEntity) {
         if (isExist(userEntity.getUserId())) return false;
-        String sql = "insert into user (userId,userPwd) values (:userId,:userPwd)";
-        return userDao.addData(sql, userEntity);
+        StringBuffer sql = new StringBuffer();
+        sql.append("insert into user (userId,userPwd");
+        if (userEntity.getUserType()!=null) sql.append(",userType");
+        if (userEntity.getUserName()!=null) sql.append(",userName");
+        if (userEntity.getUserSex() !=null) sql.append(",userSex");
+        sql.append(") values (:userId,:userPwd");
+        if (userEntity.getUserType()!=null) sql.append(",:userType");
+        if (userEntity.getUserName()!=null) sql.append(",:userName");
+        if (userEntity.getUserSex() !=null) sql.append(",:userSex");
+        sql.append(")");
+        return userDao.addData(sql.toString(), userEntity);
     }
 
     @Override

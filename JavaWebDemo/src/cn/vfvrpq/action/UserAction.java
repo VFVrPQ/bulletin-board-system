@@ -15,7 +15,9 @@ public class UserAction {
     private ResultCause result = new ResultCause();
     private String userId;
     private String userPwd;
-
+    private String userSex;
+    private String userName;
+    private String userType;
     /**
      * addData中有用户Id存在判断，如果存在则返回false，即fail.
      * @return
@@ -24,6 +26,9 @@ public class UserAction {
         UserEntity userEntity = new UserEntity();
         userEntity.setUserId(userId);
         userEntity.setUserPwd(userPwd);
+        userEntity.setUserSex(userSex);
+        userEntity.setUserName(userName);
+        userEntity.setUserType(userType);
         if (userService.addData(userEntity)){
             result.setCause("200","REGISTER_SUCCESS");
         }else {
@@ -81,5 +86,29 @@ public class UserAction {
 
     public void setUserPwd(String userPwd) {
         this.userPwd = userPwd;
+    }
+
+    public String getUserSex() {
+        return userSex;
+    }
+
+    public void setUserSex(String userSex) {
+        this.userSex = userSex;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }
