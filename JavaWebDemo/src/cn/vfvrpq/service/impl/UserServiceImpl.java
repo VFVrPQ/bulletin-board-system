@@ -44,4 +44,10 @@ public class UserServiceImpl implements UserService {
         if (userEntity.size()==0) return false;
         return true;
     }
+
+    @Override
+    public List<UserEntity> getData(String userId) {
+        String sql = "select * from user where userId = ?";
+        return  userDao.getData(sql, new Object[]{userId});
+    }
 }

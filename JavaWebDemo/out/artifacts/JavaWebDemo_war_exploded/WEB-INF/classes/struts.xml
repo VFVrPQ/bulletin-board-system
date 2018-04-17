@@ -29,6 +29,12 @@
                 <param name="excludeNullProperties">true</param>
                 <param name="excludeProperties">SUCCESS</param>
             </result>
+            <result name="GET_DATA_SUCCESS" type="json">
+                <param name="root">userEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+
         </action>
     </package>
 </struts>

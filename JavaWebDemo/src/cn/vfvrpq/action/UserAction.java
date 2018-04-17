@@ -6,6 +6,7 @@ import cn.vfvrpq.service.UserService;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Controller("userAction")
 public class UserAction {
@@ -51,10 +52,17 @@ public class UserAction {
         if (userService.isExist(userId)){
             result.setCause("200","EXIST_SUCCESS");
         }else {
-            result.setCause("200","EXIST_FAIL");
+            result.setCause("400","EXIST_FAIL");
         }
         return "EXIST_SUCCESS";
     }
+
+    private List<UserEntity> userEntityList;
+    public String getData(){
+        userEntityList = userService.getData(userId);
+        return "GET_DATA_SUCCESS";
+    }
+
 
     public UserService getUserService() {
         return userService;
@@ -110,5 +118,13 @@ public class UserAction {
 
     public void setUserType(String userType) {
         this.userType = userType;
+    }
+
+    public List<UserEntity> getUserEntityList() {
+        return userEntityList;
+    }
+
+    public void setUserEntityList(List<UserEntity> userEntityList) {
+        this.userEntityList = userEntityList;
     }
 }
