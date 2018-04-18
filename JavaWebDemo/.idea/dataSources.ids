@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="bulletin@localhost" uuid="900f45f7-a601-4373-bc75-6e868e7d8e62">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+    <database-info product="MySQL" version="5.6.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="bulletin">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="demo"/>
+      <schema id="3" name="information_schema"/>
+      <schema id="4" name="mysql"/>
+      <schema id="5" name="performance_schema"/>
+      <schema id="6" name="sport"/>
+      <schema id="7" name="sport123"/>
+      <schema id="8" name="test"/>
+      <table id="9" parent="1" name="note"/>
+      <table id="10" parent="1" name="user"/>
+      <table id="11" parent="1" name="usernote"/>
+      <column id="12" parent="9" name="noteId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="13" parent="9" name="noteNumber">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="14" parent="9" name="noteName">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="15" parent="9" name="noteType">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="16" parent="9" name="noteOwner">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <key id="17" parent="9" name="PRIMARY">
+        <columns>noteId</columns>
+        <primary>1</primary>
+      </key>
+      <column id="18" parent="10" name="userName">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="19" parent="10" name="userId">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="20" parent="10" name="userSex">
+        <data-type>varchar(2)|0</data-type>
+      </column>
+      <column id="21" parent="10" name="userType">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="22" parent="10" name="userPwd">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <key id="23" parent="10" name="PRIMARY">
+        <columns>userId</columns>
+        <primary>1</primary>
+      </key>
+      <column id="24" parent="11" name="noteId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="25" parent="11" name="userId">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="26" parent="11" name="floorNumber">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="27" parent="11" name="content">
+        <data-type>varchar(10000)|0</data-type>
+      </column>
+      <column id="28" parent="11" name="floorType">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <key id="29" parent="11" name="PRIMARY">
+        <columns>noteId
+floorNumber</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
   </data-source>
 </component>

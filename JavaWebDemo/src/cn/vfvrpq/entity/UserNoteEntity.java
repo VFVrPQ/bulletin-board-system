@@ -3,13 +3,18 @@ package cn.vfvrpq.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user-note", schema = "bulletin", catalog = "")
+@Table(name = "usernote", schema = "bulletin", catalog = "")
 @IdClass(UserNoteEntityPK.class)
 public class UserNoteEntity {
     private int noteId;
     private String userId;
     private Integer floorNumber;
     private String content;
+    private String floorType;
+
+    public void setFloorNumber(int floorNumber) {
+        this.floorNumber = floorNumber;
+    }
 
     @Id
     @Column(name = "noteId", nullable = false)
@@ -21,6 +26,7 @@ public class UserNoteEntity {
         this.noteId = noteId;
     }
 
+    @Basic
     @Id
     @Column(name = "userId", nullable = false, length = 45)
     public String getUserId() {
@@ -31,6 +37,7 @@ public class UserNoteEntity {
         this.userId = userId;
     }
 
+    @Id
     @Basic
     @Column(name = "floorNumber", nullable = true)
     public Integer getFloorNumber() {
@@ -73,5 +80,15 @@ public class UserNoteEntity {
         result = 31 * result + (floorNumber != null ? floorNumber.hashCode() : 0);
         result = 31 * result + (content != null ? content.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "floorType")
+    public String getFloorType() {
+        return floorType;
+    }
+
+    public void setFloorType(String floorType) {
+        this.floorType = floorType;
     }
 }

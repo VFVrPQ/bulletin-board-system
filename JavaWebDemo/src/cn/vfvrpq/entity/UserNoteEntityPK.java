@@ -1,5 +1,6 @@
 package cn.vfvrpq.entity;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
@@ -7,6 +8,7 @@ import java.io.Serializable;
 public class UserNoteEntityPK implements Serializable {
     private int noteId;
     private String userId;
+    private Integer floorNumber;
 
     @Column(name = "noteId", nullable = false)
     @Id
@@ -46,5 +48,16 @@ public class UserNoteEntityPK implements Serializable {
         int result = noteId;
         result = 31 * result + (userId != null ? userId.hashCode() : 0);
         return result;
+    }
+
+    @Column(name = "floorNumber", nullable = true)
+    @Basic
+    @Id
+    public Integer getFloorNumber() {
+        return floorNumber;
+    }
+
+    public void setFloorNumber(Integer floorNumber) {
+        this.floorNumber = floorNumber;
     }
 }

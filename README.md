@@ -16,7 +16,7 @@ using j2ee
 
 * userName ：昵称
 * userId ：学号或者工号
-* userSex ： 性别
+* userSex ： 性别vv
 * userType ： 用户类型，管理员，学生
 * userPwd ： 密码
 
@@ -28,9 +28,16 @@ using j2ee
 * noteType : 帖子类型（置顶，普通）
 * noteOwner : 发帖人（userId表示）
 
-3. user-note表 （帖子内的每个消息）
+3. userNote表 （帖子内的每个消息）
 
 * noteId
 * userId
 * floorNumber : 第几个消息
 * content ：内容
+* floorType : 隐藏，删除，显示
+* upNumber ： 点赞数（暂时不加）
+* downNumber ：踩数（暂时不加）
+
+### 帖子内的消息
+
+帖子内的消息删除不是真的从表中删除（不然要修改floorNumber，很麻烦，只是设置类型成"删除",并不显示在帖子中）
