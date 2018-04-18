@@ -11,6 +11,7 @@ public class UserNoteEntity {
     private Integer floorNumber;
     private String content;
     private String floorType;
+    private String floorTime;
 
     public void setFloorNumber(int floorNumber) {
         this.floorNumber = floorNumber;
@@ -28,7 +29,7 @@ public class UserNoteEntity {
 
     @Basic
     @Id
-    @Column(name = "userId", nullable = false, length = 45)
+    @Column(name = "userId", nullable = true, length = 45)
     public String getUserId() {
         return userId;
     }
@@ -39,7 +40,7 @@ public class UserNoteEntity {
 
     @Id
     @Basic
-    @Column(name = "floorNumber", nullable = true)
+    @Column(name = "floorNumber", nullable = false)
     public Integer getFloorNumber() {
         return floorNumber;
     }
@@ -83,12 +84,22 @@ public class UserNoteEntity {
     }
 
     @Basic
-    @Column(name = "floorType")
+    @Column(name = "floorType", nullable = true, length = 45)
     public String getFloorType() {
         return floorType;
     }
 
     public void setFloorType(String floorType) {
         this.floorType = floorType;
+    }
+
+    @Basic
+    @Column(name = "floorTime", nullable = true, length = 255)
+    public String getFloorTime() {
+        return floorTime;
+    }
+
+    public void setFloorTime(String floorTime) {
+        this.floorTime = floorTime;
     }
 }

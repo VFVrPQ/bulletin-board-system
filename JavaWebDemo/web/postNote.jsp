@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=utf-8" %>
+<!-- 发帖 -->
+<%@page contentType="text/html; charset=utf-8" %>
 <!doctype html>
         <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
         <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
@@ -109,60 +110,33 @@
 
                                                 <article class="type-page hentry clearfix">
                                                         <h1 class="post-title">
-                                                                <a href="#">注册</a>
+                                                                <a href="#">发帖</a>
                                                         </h1>
                                                         <hr>
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                                        <!--p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p-->
                                                 </article>
 
 
                                                 <form id="contact-form" class="row">
 
-                                                    <div class="span2">
-                                                        <label for="userId_input">学号/工号 <span>*</span> </label>
-                                                    </div>
-                                                    <div class="span6">
-                                                        <input type="text" id="userId_input" class="required input-xlarge" title="* 请输入用户名">
-                                                    </div>
-
-                                                    <div class="span2">
-                                                        <label for="userName_input">昵称 <span>*</span> </label>
-                                                    </div>
-                                                    <div class="span6">
-                                                        <input type="text" id="userName_input" class="required input-xlarge" title="* 请输入昵称">
-                                                    </div>
-
-                                                    <div class="span2">
-                                                        <label for="userSex_input">性别 <span>*</span> </label>
-                                                    </div>
-                                                    <div class="span6">
-                                                        <div class="required input-xlarge" id="userSex_input">
-                                                            <input type="radio" name="userSex" id="userSex_input_bm" value="保密" checked>保密
-                                                            <input type="radio" name="userSex" id="userSex_input_male" value="男">男
-                                                            <input type="radio" name="userSex" id="userSex_input_female" value="女">女
+                                                        <div class="span2">
+                                                                <label for="noteName_input">标题<span>*</span> </label>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="span2">
-                                                        <label for="userType_input">类型 <span>*</span> </label>
-                                                    </div>
-                                                    <div class="span6">
-                                                        <div class="'required input-xlarge" id="userType_input">
-                                                            <input type="radio" name="userType" id="userType_input_student" value="学生" checked>学生
-                                                            <input type="radio" name="userType" id="userType_input_teacher" value="老师">老师
+                                                        <div class="span6">
+                                                                <input type="text" name="noteName" id="noteName_input" class="required input-xlarge" value="" title="* 请输入标题">
                                                         </div>
-                                                    </div>
 
-                                                    <div class="span2">
-                                                        <label for="userPwd_input">密码<span>*</span> </label>
-                                                    </div>
-                                                    <div class="span6">
-                                                        <input type="password" id="userPwd_input" class="required input-xlarge" title="* 请输入密码">
-                                                    </div>
+                                                        <div class="span2">
+                                                                <label for="content_input">内容<span>*</span> </label>
+                                                        </div>
+                                                        <div class="span6">
+                                                                <textarea name="content" id="content_input" class="required span6" rows="6" title="* 请输入内容"></textarea>
+                                                        </div>
 
-                                                    <div class="span6 offset2 bm30">
-                                                        <input type="submit" name="submit" value="注册" class="btn btn-inverse"  id="btn_login">
-                                                        <img src="images/loading.gif" id="contact-loader" alt="Loading...">
+                                                        <div class="span6 offset2 bm30">
+                                                                <input type="submit" name="submit" value="发帖" class="btn btn-inverse"  id="btn_post">
+                                                                <img src="images/loading.gif" id="contact-loader" alt="Loading...">
+                                                        </div>
 
                                                         <div class="span6 offset2 error-container"></div>
                                                         <div class="span8 offset2" id="message-sent"></div>
@@ -321,7 +295,7 @@
                 <script type='text/javascript' src='js/jquery.formd471.js?ver=3.18'></script>
                 <script type='text/javascript' src='js/jquery.validate.minfc6b.js?ver=1.10.0'></script>
                 <script type='text/javascript' src='js/custom5152.js?ver=1.0'></script>
-                <script type='text/javascript' src="js/register.js"></script>
+                <script type="text/javascript" src="js/postNote.js"></script>
                 <script type='text/javascript' src="Global/global.js"></script>
 
         <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>

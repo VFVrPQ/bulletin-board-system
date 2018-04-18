@@ -50,7 +50,7 @@ public class UserNoteEntityPK implements Serializable {
         return result;
     }
 
-    @Column(name = "floorNumber", nullable = true)
+    @Column(name = "floorNumber", nullable = false)
     @Basic
     @Id
     public Integer getFloorNumber() {

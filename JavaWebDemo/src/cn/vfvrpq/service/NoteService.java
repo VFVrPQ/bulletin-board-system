@@ -8,5 +8,6 @@ public interface NoteService {
     public Boolean addData(NoteEntity noteEntity);
     public Boolean delData(String noteId);
     public List<NoteEntity> getData(String noteId);
-    public Boolean updateData(String noteId, String noteNumber, String noteName, String noteType, String noteOwner);
+    public List<NoteEntity> getDataByOthers(String noteNumber, String noteName, String noteType, String noteOwner, String noteTime);
+    public Boolean updateData(String noteId, String noteNumber, String noteName, String noteType, String noteOwner, String noteTime);
 }

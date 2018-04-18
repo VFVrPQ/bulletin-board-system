@@ -19,7 +19,7 @@ public class UserNoteServiceImpl implements UserNoteService {
 
     @Override
     public Boolean addData(UserNoteEntity userNoteEntity) {
-        String sql = "INSERT INTO userNote (noteId,userId,floorNumber,content,floorType) VALUES (:noteId,:userId,:floorNumber,:content,:floorType)";
+        String sql = "INSERT INTO userNote (noteId,userId,floorNumber,content,floorType,floorTime) VALUES (:noteId,:userId,:floorNumber,:content,:floorType,:floorTime)";
         return userNoteDao.addData(sql, userNoteEntity);
     }
 
@@ -42,7 +42,7 @@ public class UserNoteServiceImpl implements UserNoteService {
     }
 
     @Override
-    public Boolean updateData(String noteId, String userId, String floorNumber, String content, String floorType) {
+    public Boolean updateData(String noteId, String userId, String floorNumber, String content, String floorType, String floorTime) {
         List<UserNoteEntity> userNoteEntityList = getData(noteId,floorNumber);
         if (userNoteEntityList.size()==0) return false;
         assert userNoteEntityList.size()==1;
@@ -51,8 +51,9 @@ public class UserNoteServiceImpl implements UserNoteService {
             if (userId==null) userId = userNoteEntity.getUserId();
             if (content==null) content = userNoteEntity.getContent();
             if (floorType==null) floorType = userNoteEntity.getFloorType();
+            if (floorTime==null) floorTime = userNoteEntity.getFloorTime();
         }
-        String sql = "update userNote set userId = ?, content = ?, floorType = ?, noteId = ? where floorNumber = ?";
-        return userNoteDao.updateData(sql, new Object[]{userId, content, floorType, noteId, floorNumber});
+        String sql = "update userNote set userId = ?, content = ?, floorType = ?, floorTime = ? where noteId = ? and floorNumber = ?";
+        return userNoteDao.updateData(sql, new Object[]{userId, content, floorType, floorTime, noteId, floorNumber});
     }
 }

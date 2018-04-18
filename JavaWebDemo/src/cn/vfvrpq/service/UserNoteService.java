@@ -13,5 +13,5 @@ public interface UserNoteService {
     public Boolean delData(String noteId, String floorNumber);
     public List<UserNoteEntity> getData(String noteId);
     public List<UserNoteEntity> getData(String noteId, String floorNumber);
-    public Boolean updateData(String noteId, String userId, String floorNumber, String content, String floorType);
+    public Boolean updateData(String noteId, String userId, String floorNumber, String content, String floorType, String floorTime);
 }

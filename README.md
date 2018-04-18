@@ -27,6 +27,7 @@ using j2ee
 * noteName : 帖子的标题
 * noteType : 帖子类型（置顶，普通）
 * noteOwner : 发帖人（userId表示）
+* noteTime : 发帖时间
 
 3. userNote表 （帖子内的每个消息）
 
@@ -37,6 +38,7 @@ using j2ee
 * floorType : 隐藏，删除，显示
 * upNumber ： 点赞数（暂时不加）
 * downNumber ：踩数（暂时不加）
+* floorTime : 发送时间
 
 ### 帖子内的消息
 

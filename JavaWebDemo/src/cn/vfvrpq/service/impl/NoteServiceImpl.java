@@ -18,7 +18,7 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public Boolean addData(NoteEntity noteEntity) {
-        String sql = "insert into note (noteNumber,noteName,noteType,noteOwner) values (:noteNumber,:noteName,:noteType,:noteOwner)";
+        String sql = "insert into note (noteNumber,noteName,noteType,noteOwner,noteTime) values (:noteNumber,:noteName,:noteType,:noteOwner,:noteTime)";
         return noteDao.addData(sql, noteEntity);
     }
 
@@ -35,7 +35,13 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public Boolean updateData(String noteId, String noteNumber, String noteName, String noteType, String noteOwner) {
+    public List<NoteEntity> getDataByOthers(String noteNumber, String noteName, String noteType, String noteOwner, String noteTime) {
+        String sql = "select * from note where noteNumber = ? and noteName = ? and noteType = ? and noteOwner = ? and noteTime = ?";
+        return noteDao.getData(sql, new Object[]{noteNumber,noteName,noteType,noteOwner,noteTime});
+    }
+
+    @Override
+    public Boolean updateData(String noteId, String noteNumber, String noteName, String noteType, String noteOwner, String noteTime) {
         List<NoteEntity> noteEntityList = getData(noteId);
         if (noteEntityList.size()==0) return false;
         for (int i=0;i<noteEntityList.size();i++){
@@ -44,8 +50,17 @@ public class NoteServiceImpl implements NoteService {
             if (noteName==null) noteName = noteEntity.getNoteName();
             if (noteType==null) noteType = noteEntity.getNoteType();
             if (noteOwner==null) noteOwner = noteEntity.getNoteOwner();
+            if (noteTime==null) noteTime = noteEntity.getNoteTime();
         }
-        String sql = "update note set noteNumber = ?, noteName = ?, noteType = ?, noteOwner = ? where noteId = ?";
-        return noteDao.updateData(sql, new Object[]{noteNumber, noteName, noteType, noteOwner, noteId});
+        String sql = "update note set noteNumber = ?, noteName = ?, noteType = ?, noteOwner = ?, noteTime = ? where noteId = ?";
+        return noteDao.updateData(sql, new Object[]{noteNumber, noteName, noteType, noteOwner, noteTime, noteId});
+    }
+
+    public NoteDao getNoteDao() {
+        return noteDao;
+    }
+
+    public void setNoteDao(NoteDao noteDao) {
+        this.noteDao = noteDao;
     }
 }

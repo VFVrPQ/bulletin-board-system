@@ -10,6 +10,7 @@ public class NoteEntity {
     private String noteName;
     private String noteType;
     private String noteOwner;
+    private String noteTime;
 
     @Id
     @Column(name = "noteId", nullable = false)
@@ -85,5 +86,15 @@ public class NoteEntity {
         result = 31 * result + (noteType != null ? noteType.hashCode() : 0);
         result = 31 * result + (noteOwner != null ? noteOwner.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "noteTime", nullable = true, length = 255)
+    public String getNoteTime() {
+        return noteTime;
+    }
+
+    public void setNoteTime(String noteTime) {
+        this.noteTime = noteTime;
     }
 }

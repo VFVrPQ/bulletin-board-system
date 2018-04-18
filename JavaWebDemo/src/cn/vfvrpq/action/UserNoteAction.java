@@ -38,10 +38,10 @@ public class UserNoteAction {
         return "DEL_SUCCESS";
     }
 
-    private String userId, content, floorType;
+    private String userId, content, floorType,floorTime;
     public String updateData(){
         // updateData(String noteId, String userId, String floorNumber, String content, String floorType) {
-        if (userNoteService.updateData(noteId,userId,floorNumber,content,floorType)) {
+        if (userNoteService.updateData(noteId,userId,floorNumber,content,floorType,floorTime)) {
             result.setCause("200", "UPDATE_SUCCESS");
         }else{
             result.setCause("400","UPDATE_FAIL");
@@ -56,6 +56,7 @@ public class UserNoteAction {
         userNoteEntity.setFloorNumber(Integer.parseInt(floorNumber));
         userNoteEntity.setFloorType(floorType);
         userNoteEntity.setUserId(userId);
+        userNoteEntity.setFloorTime(floorTime);
         if (userNoteService.addData(userNoteEntity)){
             result.setCause("200", "ADD_SUCCESS");
         }else{
@@ -126,5 +127,13 @@ public class UserNoteAction {
 
     public void setFloorType(String floorType) {
         this.floorType = floorType;
+    }
+
+    public String getFloorTime() {
+        return floorTime;
+    }
+
+    public void setFloorTime(String floorTime) {
+        this.floorTime = floorTime;
     }
 }

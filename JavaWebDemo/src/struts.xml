@@ -37,6 +37,11 @@
         </action>
         <action name="note_*" class="noteAction" method="{1}">
             <result name="ADD_SUCCESS" type="json">
+                <param name="root">noteEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+            <result name="ADD_FAIL" type="json">
                 <param name="root">result</param>
                 <param name="excludeNullProperties">true</param>
                 <param name="excludeProperties">SUCCESS</param>
@@ -57,7 +62,7 @@
                 <param name="excludeProperties">SUCCESS</param>
             </result>
         </action>
-        <action name="usernote_*" class="userNoteAction" method="{1}">
+        <action name="userNote_*" class="userNoteAction" method="{1}">
             <result name="ADD_SUCCESS" type="json">
                 <param name="root">result</param>
                 <param name="excludeNullProperties">true</param>

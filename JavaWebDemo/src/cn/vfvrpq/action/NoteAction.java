@@ -21,11 +21,6 @@ public class NoteAction {
     private String noteId;
     private List<NoteEntity> noteEntityList;
 
-    public String getData(){
-        noteEntityList = noteService.getData(noteId);
-        return "GET_SUCCESS";
-    }
-
     public String delData(){
         if (noteService.delData(noteId)){
             result.setCause("200","DEL_SUCCESS");
@@ -35,10 +30,10 @@ public class NoteAction {
         return "DEL_SUCCESS";
     }
 
-    private String noteNumber,noteName,noteType,noteOwner;
+    private String noteNumber,noteName,noteType,noteOwner,noteTime;
     public String updateData(){
         //updateData(String noteId, String noteNumber, String noteName, String noteType, String noteOwner)
-        if (noteService.updateData(noteId,noteNumber,noteName,noteType,noteOwner)) {
+        if (noteService.updateData(noteId,noteNumber,noteName,noteType,noteOwner,noteTime)) {
             result.setCause("200", "UPDATE_SUCCESS");
         }else{
             result.setCause("400","UPDATE_FAIL");
@@ -53,13 +48,28 @@ public class NoteAction {
         noteEntity.setNoteNumber(noteNumber);
         noteEntity.setNoteType(noteType);
         noteEntity.setNoteOwner(noteOwner);
+        noteEntity.setNoteTime(noteTime);
         if (noteService.addData(noteEntity)){
-            result.setCause("200", "ADD_SUCCESS");
+            //result.setCause("200", "ADD_SUCCESS");
+            noteEntityList = noteService.getDataByOthers(noteNumber, noteName, noteType, noteOwner, noteTime);
+            return "ADD_SUCCESS";
         }else{
             result.setCause("400", "ADD_FAIL");
+            return "ADD_FAIL";
         }
-        return "ADD_SUCCESS";
+
     }
+
+    public String getData(){
+        noteEntityList = noteService.getData(noteId);
+        return "GET_SUCCESS";
+    }
+
+    /*
+    public String getDataByOthers(){
+        noteEntityList = noteService.getDataByOthers(noteNumber, noteName, noteType, noteOwner, noteTime);
+        return "GET_SUCCESS";
+    }*/
 
     public NoteService getNoteService() {
         return noteService;
@@ -123,5 +133,13 @@ public class NoteAction {
 
     public void setNoteOwner(String noteOwner) {
         this.noteOwner = noteOwner;
+    }
+
+    public String getNoteTime() {
+        return noteTime;
+    }
+
+    public void setNoteTime(String noteTime) {
+        this.noteTime = noteTime;
     }
 }
