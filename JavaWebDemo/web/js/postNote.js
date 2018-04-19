@@ -11,7 +11,13 @@ $(function () {
         alert("noteName=" + noteName + "; noteTime=" + noteTime);
         //need change
         //using session
-        var noteOwner = "081520122";
+        var noteOwner = sessionStorage.getItem('userId');
+        //alert("noteOwner=" + noteOwner);
+        if (noteOwner == null){
+            alert("请登录！");
+            sessionStorage.setItem('goto',"postNote.jsp");
+            window.location.href="../login.jsp";
+        }
         var param = {
             noteNumber: noteNumber,
             noteName: noteName,
@@ -51,7 +57,6 @@ function postSuccess(data){
     if (data.resultCode == "400"){
         postOk = 0;
         alert("发帖失败！");
-
     }else{
         //alert("发帖成功！");
         //window.location.href="../index.html";

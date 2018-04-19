@@ -1,7 +1,9 @@
+var userId;
+var userPwd;
 $(function () {
     $('#btn_login').on('click',function(){
-        var userId = $('#userId_input').val();
-        var userPwd = $('#userPwd_input').val();
+        userId = $('#userId_input').val();
+        userPwd = $('#userPwd_input').val();
         var param = {
             userId: userId,
             userPwd: userPwd
@@ -18,7 +20,15 @@ $(function () {
 
 function loginSuccess(data) {
     if(data.resultCode === "200"){
-        window.location.href="../index.html";
+        sessionStorage.setItem('userId', userId);
+
+        var goto = sessionStorage.getItem('goto');
+        if (goto==null || goto=="")
+            window.location.href="../index.html";
+        else {//跳转到如发帖的网站之类的
+            window.location.href = "../" + goto;
+            sessionStorage.setItem('goto', "");
+        }
     }
     else if(data.resultCode === "400"){
         alert("用户名或者密码错误！");
