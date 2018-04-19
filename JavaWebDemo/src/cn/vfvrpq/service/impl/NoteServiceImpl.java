@@ -28,10 +28,25 @@ public class NoteServiceImpl implements NoteService {
         return noteDao.delData(sql, new Object[]{noteId});
     }
 
+
     @Override
     public List<NoteEntity> getData(String noteId) {
         String sql = "select * from note where noteId = ?";
         return noteDao.getData(sql, new Object[]{noteId});
+    }
+
+    @Override
+    public List<NoteEntity> getData(Integer page, Integer pageNumber) {
+        String sql = "select * from note order by noteTime DESC";
+        List<NoteEntity> noteEntityList = noteDao.getData(sql, new Object[]{});
+
+        Integer beginNum = page*pageNumber;
+        Integer endNum = (page+1)*pageNumber;
+
+        if (beginNum >= noteEntityList.size()) return null;
+
+        endNum = Math.min(endNum, noteEntityList.size());
+        return noteEntityList.subList(beginNum,endNum);
     }
 
     @Override

@@ -99,5 +99,4 @@ function getCurrentTime(){
     if (mm   <10) clock += "0"; clock += mm    + ":";
     if (ss   <10) clock += "0"; clock += ss;
     return clock;
-
 }

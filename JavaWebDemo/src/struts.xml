@@ -84,5 +84,19 @@
                 <param name="excludeProperties">SUCCESS</param>
             </result>
         </action>
+        <action name="noteList_*" class="noteListAction" method="{1}">
+            <result name="GET_SUCCESS" type="json">
+                <param name="root">noteListEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+        </action>
+        <action name="comment_*" class="commentAction" method="{1}">
+            <result name="GET_SUCCESS" type="json">
+                <param name="root">commentEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+        </action>
     </package>
 </struts>

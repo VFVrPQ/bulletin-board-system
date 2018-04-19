@@ -65,6 +65,19 @@ public class NoteAction {
         return "GET_SUCCESS";
     }
 
+    private Integer page = 0;
+    private Integer pageNumber = 10;
+
+    /**
+     * page第几页；pageNumber每页几个
+     * 当传出来的值是null时，说明已经gg了；
+     * 当传出来的值<pageNumber,说明已经是最后一页了。
+     * @return
+     */
+    public String getAllData(){
+        noteEntityList = noteService.getData(page, pageNumber);
+        return "GET_SUCCESS";
+    }
     /*
     public String getDataByOthers(){
         noteEntityList = noteService.getDataByOthers(noteNumber, noteName, noteType, noteOwner, noteTime);
@@ -141,5 +154,21 @@ public class NoteAction {
 
     public void setNoteTime(String noteTime) {
         this.noteTime = noteTime;
+    }
+
+    public Integer getPage() {
+        return page;
+    }
+
+    public void setPage(Integer page) {
+        this.page = page;
+    }
+
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
     }
 }

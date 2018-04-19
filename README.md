@@ -5,7 +5,7 @@ using j2ee
 
 ## 界面
 
-1. 登陆界面
+1. 登陆/注册界面
 2. 论坛主界面
 3. 每个论坛的界面
 4. 创建帖子的界面
@@ -43,3 +43,57 @@ using j2ee
 ### 帖子内的消息
 
 帖子内的消息删除不是真的从表中删除（不然要修改floorNumber，很麻烦，只是设置类型成"删除",并不显示在帖子中）
+
+### 数据库的视图（外模式）
+
+今天听课听到"视图"这个概念的时候，突然觉得以前写的很多程序都做了好多无用功。
+视图是一个面向应用的东西，可以任意组合表（模式），并显示在一张表内。
+在他面前，联合查询变得没必要了，直接创建视图并查询试图就可以了。
+
+我现在一个页面可以制作一张视图了，并直接查询这个视图就好了。
+
+### 创建noteList
+
+```sql
+CREATE VIEW `noteList` (noteId , noteNumber , noteName , noteType , noteOwner , noteTime , userId , content , number) AS
+    SELECT
+        note.noteId,
+        note.noteNumber,
+        note.noteName,
+        note.noteType,
+        note.noteOwner,
+        note.noteTime,
+        usernote.userId,
+        usernote.content,
+        COUNT(*)
+    FROM
+        note,
+        usernote
+    WHERE
+        note.noteId = usernote.noteId
+            AND usernote.floorNumber = 1
+    GROUP BY note.noteId
+    ORDER BY note.noteTime DESC
+```
+
+### 创建comment视图
+
+```sql
+CREATE VIEW `comment` (noteId , userId , floorNumber , content , floorType , floorTime , userName) AS
+    SELECT
+        usernote.noteId,
+        usernote.userId,
+        usernote.floorNumber,
+        usernote.content,
+        usernote.floorType,
+        usernote.floorTime,
+        user.userName
+    FROM
+        usernote,
+        user
+    WHERE
+        usernote.userId = user.userId
+            AND usernote.floorNumber != 1
+    GROUP BY usernote.noteId , usernote.floorNumber
+    ORDER BY floorNumber DESC
+```
