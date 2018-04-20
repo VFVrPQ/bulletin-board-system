@@ -24,7 +24,7 @@ function loginSuccess(data) {
 
         var goto = sessionStorage.getItem('goto');
         if (goto==null || goto=="")
-            window.location.href="../index.html";
+            window.location.href="../noteList.jsp";
         else {//跳转到如发帖的网站之类的
             window.location.href = "../" + goto;
             sessionStorage.setItem('goto', "");

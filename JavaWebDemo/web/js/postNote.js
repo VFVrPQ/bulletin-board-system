@@ -1,37 +1,47 @@
 var noteId;
-var postOk = 1;
+var noteNumber;
+var noteName;
+var noteType;
+var noteTime;
+var noteOwner;
 
 $(function () {
     $('#btn_post').on('click',function(){
-        var noteNumber = "1";
-        var noteName = $('#noteName_input').val();
-        var noteType = "普通";
-        var noteTime = getCurrentTime();
+        noteNumber = "1";
+        noteName = $('#noteName_input').val();
+        noteType = "普通";
+        noteTime = getCurrentTime();
 
-        alert("noteName=" + noteName + "; noteTime=" + noteTime);
-        //need change
+        //alert("noteName=" + noteName + "; noteTime=" + noteTime);
         //using session
-        var noteOwner = sessionStorage.getItem('userId');
+        noteOwner = sessionStorage.getItem('userId');
         //alert("noteOwner=" + noteOwner);
         if (noteOwner == null){
             alert("请登录！");
             sessionStorage.setItem('goto',"postNote.jsp");
             window.location.href="../login.jsp";
+        }else{
+            var param = {
+                noteNumber: noteNumber,
+                noteName: noteName,
+                noteType: noteType,
+                noteTime: noteTime,
+                noteOwner: noteOwner
+            };
+            //写入note表
+            postAjax("note_addData.action",param,postSuccess);
         }
-        var param = {
-            noteNumber: noteNumber,
-            noteName: noteName,
-            noteType: noteType,
-            noteTime: noteTime,
-            noteOwner: noteOwner
-        };
-        //写入note表
-        postAjax("note_addData.action",param,postSuccess);
+    });
+});
 
-        if (!postOk){
-            return false;
-        }
-
+//success
+function postSuccess(data){
+    if (data.resultCode == "400"){
+        alert("发帖失败！");
+    }else{
+        //alert("发帖成功！");
+        //window.location.href="../index.html";
+        getNoteId(data);
         var userId = noteOwner;
         var floorNumber = "1";
         var content = $('#content_input').val();
@@ -40,7 +50,7 @@ $(function () {
         //getNoteId
         //postAjax("note_getDataByOthers.action",param,getNoteId);
 
-        var param2 = {
+        var param = {
             noteId: noteId,
             userId: userId,
             floorNumber: floorNumber,
@@ -48,26 +58,14 @@ $(function () {
             floorType: floorType,
             floorTime: floorTime
         };
-        postAjax("userNote_addData.action",param2,floorPostSuccess);
-    });
-});
-
-//success
-function postSuccess(data){
-    if (data.resultCode == "400"){
-        postOk = 0;
-        alert("发帖失败！");
-    }else{
-        //alert("发帖成功！");
-        //window.location.href="../index.html";
-        getNoteId(data);
+        postAjax("userNote_addData.action",param,floorPostSuccess);
     }
 }
 
 function floorPostSuccess(data){
     if (data.resultCode == "200"){
         alert("发帖成功！");
-        window.location.href="../index.html";
+        window.location.href="../noteList.jsp";
     }else{
         alert("发帖失败！");
     }

@@ -117,7 +117,7 @@
                                                 </article>
 
 
-                                                <form id="contact-form" class="row">
+                                                <div id="contact-form" class="row">
 
                                                         <div class="span2">
                                                                 <label for="noteName_input">标题<span>*</span> </label>
@@ -141,7 +141,7 @@
                                                         <div class="span6 offset2 error-container"></div>
                                                         <div class="span8 offset2" id="message-sent"></div>
 
-                                                </form>
+                                                </div>
                                         </div>
                                         <!-- end of page content -->
 

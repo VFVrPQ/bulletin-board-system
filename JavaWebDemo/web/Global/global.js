@@ -34,22 +34,6 @@ function postAjaxE(url,param){
 // 3 － （交互）正在解析响应内容
 // 4 － （完成）响应内容解析完成，可以在客户端调用了
 
-function checkPermission(str) {
-    var param = {url:str.split("/",3)[2]};
-    var url = "permission_checkPermission.action";
-    postAjax(url,param,loginForward);
-}
-function loginForward(data) {
-    if(data.resultCode !== "200"){
-        alert("您没有权限访问该页面");
-        history.go(-1);
-    }
-}
-// window.alert = function (msg) {
-//     $("#common_modal").find(".modal-body").text(msg);
-//     $("#common_modal").modal('show');
-// };
-
 function format(json) {
     var a = [];
     for (var key in json) {
@@ -58,3 +42,8 @@ function format(json) {
     return a.join('&');
 }
 
+
+function search(){
+    var key = $('search_term').val();
+    //alert("key"+key);
+}

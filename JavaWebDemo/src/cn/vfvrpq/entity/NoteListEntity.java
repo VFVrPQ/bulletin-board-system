@@ -17,6 +17,7 @@ public class NoteListEntity {
     private String userId;
     private String content;
     private long number;
+    private String userName;
 
     @Basic
     @Column(name = "noteId", nullable = false)
@@ -140,5 +141,15 @@ public class NoteListEntity {
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (int) (number ^ (number >>> 32));
         return result;
+    }
+
+    @Basic
+    @Column(name = "userName", nullable = true, length = 255)
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

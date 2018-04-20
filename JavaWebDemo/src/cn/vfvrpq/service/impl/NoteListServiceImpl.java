@@ -20,6 +20,24 @@ public class NoteListServiceImpl implements NoteListService {
         String sql = "select * from noteList";
         List<NoteListEntity> noteListEntityList = noteListDao.getData(sql, new Object[]{});
 
+        return midDeal(noteListEntityList, page, pageNumber);
+    }
+
+    @Override
+    public List<NoteListEntity> getDataByNoteId(String noteId) {
+        String sql = "select * from noteList where noteId = ?";
+        return noteListDao.getData(sql, new Object[]{noteId});
+    }
+
+    @Override
+    public List<NoteListEntity> getDataByKey(String key, Integer page, Integer pageNumber) {
+        key = "%" + key + "%";
+        String sql = "select * from noteList where noteName like \'"+key+"\' or content like \'"+key+"\' or userName like \'"+key+"\'";
+        List<NoteListEntity> noteListEntityList = noteListDao.getData(sql, new Object[]{});
+        return midDeal(noteListEntityList, page, pageNumber);
+    }
+
+    private List<NoteListEntity> midDeal(List<NoteListEntity> noteListEntityList,Integer page, Integer pageNumber){
         if (noteListEntityList.size()==0) return new ArrayList<>();
 
         Integer beginNum = page*pageNumber;
@@ -28,14 +46,8 @@ public class NoteListServiceImpl implements NoteListService {
         Integer endNum   = (page+1)*pageNumber;
         endNum = Math.min(endNum, noteListEntityList.size());
 
-        noteListEntityList.get(beginNum).setNumber(noteListEntityList.size());
+        noteListEntityList.get(endNum-1).setNumber(noteListEntityList.size());
         return noteListEntityList.subList(beginNum, endNum);
-    }
-
-    @Override
-    public List<NoteListEntity> getDataByNoteId(String noteId) {
-        String sql = "select * from noteList where noteId = ?";
-        return noteListDao.getData(sql, new Object[]{noteId});
     }
 
     public NoteListDao getNoteListDao() {
