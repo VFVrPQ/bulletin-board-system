@@ -25,8 +25,13 @@ public class UserNoteServiceImpl implements UserNoteService {
 
     @Override
     public Boolean delData(String noteId, String floorNumber) {
-        String sql = "update userNote set floorType = '删除' where noteId = ? and floorNumber = ?";
-        return userNoteDao.updateData(sql, new Object[]{noteId,floorNumber});
+        if (floorNumber==null){
+            String sql = "delete from userNote where noteId = ?";
+            return userNoteDao.updateData(sql, new Object[]{noteId});
+        }else {
+            String sql = "delete from userNote where noteId = ? and floorNumber = ?";
+            return userNoteDao.updateData(sql, new Object[]{noteId, floorNumber});
+        }
     }
 
     @Override

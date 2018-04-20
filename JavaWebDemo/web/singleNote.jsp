@@ -13,12 +13,6 @@
 
                                 <div class="like-btn">
 
-                                        <form id="like-it-form" action="#" method="post">
-                                                <span class="like-it ">66</span>
-                                                <input type="hidden" name="post_id" value="99">
-                                                <input type="hidden" name="action" value="like_it">
-                                        </form>
-
                                         <span class="tags"></span>
 
                                 </div>

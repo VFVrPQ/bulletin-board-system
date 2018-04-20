@@ -1,10 +1,9 @@
+var userId;
 var noteId;
 var nowFloorNumber=null;
 $(function(){
-/*    $('#comment_btn').on('click',function(){
-
-    });*/
     noteId = getUrlParam('noteId');
+    userId = sessionStorage.getItem('userId');
     //alert("noteId="+noteId);
     var param = {
         noteId: noteId
@@ -32,7 +31,8 @@ function showNoteList(data){
         noteListHtml = noteListHtml + "<article class=\"format-standard type-post hentry clearfix\">\n";
         noteListHtml = noteListHtml + "    <header class=\"clearfix\">\n";
         noteListHtml = noteListHtml + "        <h3 class=\"post-title\">\n";
-        noteListHtml = noteListHtml + "            <a href=\"#\">"+obj.noteName+"</a>\n";
+        noteListHtml = noteListHtml + "            <a href=\"#\"><div contentEditable='false' id='myNoteName'>"+obj.noteName+"</div></a>\n";
+
         noteListHtml = noteListHtml + "        </h3>\n";
         noteListHtml = noteListHtml + "\n";
         noteListHtml = noteListHtml + "        <div class=\"post-meta clearfix\">\n";
@@ -41,7 +41,9 @@ function showNoteList(data){
         noteListHtml = noteListHtml + "            <span class=\"like-count\">1</span>";
         noteListHtml = noteListHtml + "        </div><!-- end of post meta -->\n";
         noteListHtml = noteListHtml + "    </header>\n";
-        noteListHtml = noteListHtml + obj.content+"\n";
+        noteListHtml = noteListHtml + "<div contentEditable=\"false\" id='myContent'>"+obj.content+"</div>\n";
+        if (userId == obj.noteOwner) noteListHtml = noteListHtml + "&nbsp;&nbsp;<input class=\"btn\" name=\"delete_\" type=\"submit\" id=\"delete_btn\" onclick=\"deleteClick()\" value=\"删除\">\n";
+        if (userId == obj.noteOwner) noteListHtml = noteListHtml + "&nbsp;&nbsp;<input class=\"btn\" name=\"change_\" type=\"submit\" id=\"change_btn\" onclick=\"changeClick()\" value=\"修改\"><div id='cancel_div'></div>\n";
         noteListHtml = noteListHtml + "</article>\n\n";
 
         nowFloorNumber = obj.noteNumber;
@@ -86,6 +88,83 @@ function showFloorList(data){
 }
 
 
+function deleteClick(){
+    var param = {
+        noteId: noteId
+    };
+    postAjax("note_delData.action",param, deleteSuccess);
+}
+
+function deleteSuccess(data){
+    if(data.resultCode === "200"){
+        var param = {
+            noteId: noteId
+        };
+        postAjax("userNote_delData.action",param,deleteUserNoteSuccess);
+    }
+    else if(data.resultCode === "400"){
+        alert("删除失败！");
+    }
+}
+function deleteUserNoteSuccess(data){
+    if(data.resultCode === "200"){
+        alert("删除成功！");
+        window.location.href="../noteList.jsp";
+    }
+    else if(data.resultCode === "400"){
+        alert("删除成功！");
+        window.location.href="../noteList.jsp";
+    }
+}
+
+function changeClick(){
+    var value_btn = $('#change_btn').val();
+    if (value_btn=="修改"){
+        document.getElementById('myNoteName').setAttribute('contenteditable','true');
+        document.getElementById('myContent').setAttribute('contenteditable','true');
+        document.getElementById('change_btn').setAttribute('value','完成');
+        $('#cancel_div').html("<input class=\"btn\" name=\"cancel_\" type=\"submit\" id=\"cancel_btn\" onclick=\"cancelClick()\" value=\"取消\">");
+    }else{
+        document.getElementById('myNoteName').setAttribute('contenteditable','false');
+        document.getElementById('myContent').setAttribute('contenteditable','false');
+        document.getElementById('change_btn').setAttribute('value','修改');
+        $('#cancel_div').html("");
+        var param ={
+            noteId : noteId,
+            noteName: $('#myNoteName').html()
+        };
+        //alert("myNoteName="+$('#myNoteName').html()+";myContent="+$('#myContent').html());
+        postAjax('note_updateData.action',param,changeSuccess);
+    }
+}
+function changeSuccess(data){
+    if(data.resultCode === "200"){
+        var param = {
+            noteId: noteId,
+            floorNumber: "1",
+            content: $('#myContent').html()
+        };
+        postAjax("userNote_updateData.action",param,changeContentSuccess);
+    }
+    else if(data.resultCode === "400"){
+        alert("修改失败！");
+    }
+}
+function changeContentSuccess(data){
+    if(data.resultCode === "200"){
+        alert("修改成功！");
+        //window.location.reload();
+    }
+    else if(data.resultCode === "400"){
+        alert("修改失败！");
+    }
+}
+function cancelClick(){
+    document.getElementById('myNoteName').setAttribute('contenteditable','false');
+    document.getElementById('myContent').setAttribute('contenteditable','false');
+    document.getElementById('change_btn').setAttribute('value','修改');
+    $('#cancel_div').html("");
+}
 function commentClick(){
     if (nowFloorNumber==null){
         alert("当前无帖子，评论失败！");
