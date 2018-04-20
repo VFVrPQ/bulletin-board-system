@@ -1,6 +1,7 @@
+var userId;
 $(function () {
     $('#btn_login').on('click',function(){
-        var userId = $('#userId_input').val();
+        userId = $('#userId_input').val();
         var userPwd = $('#userPwd_input').val();
         var userName = $('#userName_input').val();
         var userType = getUserType();
@@ -27,7 +28,8 @@ $(function () {
 function registerSuccess(data) {
     if(data.resultCode === "200"){
         alert("注册成功！");
-        window.location.href="../index.html";
+        sessionStorage.setItem('userId',userId);
+        window.location.href="../noteList.jsp";
     }
     else if(data.resultCode === "400"){
         alert("注册失败！");

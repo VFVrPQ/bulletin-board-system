@@ -44,11 +44,14 @@ function showNoteList(data){
         noteListHtml = noteListHtml + "        <div class=\"post-meta clearfix\">\n";
         noteListHtml = noteListHtml + "            <span class=\"date\">"+obj.noteTime+"</span>\n";
         noteListHtml = noteListHtml + "            <span class=\"category\"><a href=\"#\" title=\"Written By "+obj.userName+"\">"+obj.userName+"</a></span>";
-        noteListHtml = noteListHtml + "            <span class=\"comments\"><a href=\"#\" title=\"Comment on "+obj.noteName+"\">"+(obj.noteNumber-1) +" Comments</a></span>\n";
+        noteListHtml = noteListHtml + "            <span class=\"comments\"><a href=\"singleNote.jsp?noteId="+obj.noteId+"#comment_title\" title=\"Comment on "+obj.noteName+"\">"+(obj.noteNumber-1) +" Comments</a></span>\n";
         noteListHtml = noteListHtml + "            <span class=\"like-count\">1</span>";
         noteListHtml = noteListHtml + "        </div><!-- end of post meta -->\n";
         noteListHtml = noteListHtml + "    </header>\n";
-        noteListHtml = noteListHtml + "<p>"+obj.content+" . . . <a class=\"readmore-link\" href=\"../singleNote.jsp?noteId"+obj.noteId+"\">Read more</a></p>\n";
+
+        var content = obj.content;
+        if (content.length>100) content=content.substr(0,100) + " . . . <a class=\"readmore-link\" href=\"../singleNote.jsp?noteId="+obj.noteId+"\">Read more</a>\n";
+        noteListHtml = noteListHtml + content;
         noteListHtml = noteListHtml + "</article>\n\n";
     });
     //alert("pageTotal="+pageTotal);

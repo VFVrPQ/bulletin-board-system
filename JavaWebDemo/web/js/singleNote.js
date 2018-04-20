@@ -32,12 +32,13 @@ function showNoteList(data){
         noteListHtml = noteListHtml + "<article class=\"format-standard type-post hentry clearfix\">\n";
         noteListHtml = noteListHtml + "    <header class=\"clearfix\">\n";
         noteListHtml = noteListHtml + "        <h3 class=\"post-title\">\n";
-        noteListHtml = noteListHtml + "            <a href=\"single.html\">"+obj.noteName+"</a>\n";
+        noteListHtml = noteListHtml + "            <a href=\"#\">"+obj.noteName+"</a>\n";
         noteListHtml = noteListHtml + "        </h3>\n";
         noteListHtml = noteListHtml + "\n";
         noteListHtml = noteListHtml + "        <div class=\"post-meta clearfix\">\n";
         noteListHtml = noteListHtml + "            <span class=\"date\">"+obj.noteTime+"</span>\n";
-        noteListHtml = noteListHtml + "            <span class=\"comments\"><a href=\"#\" title=\"Comment on "+obj.noteName+"\">"+(obj.noteNumber-1) +" Comments</a></span>\n";
+        noteListHtml = noteListHtml + "            <span class=\"comments\"><a href=\"#comment_title\" title=\"Comment on "+obj.noteName+"\">"+(obj.noteNumber-1) +" Comments</a></span>\n";
+        noteListHtml = noteListHtml + "            <span class=\"like-count\">1</span>";
         noteListHtml = noteListHtml + "        </div><!-- end of post meta -->\n";
         noteListHtml = noteListHtml + "    </header>\n";
         noteListHtml = noteListHtml + obj.content+"\n";
@@ -55,7 +56,7 @@ function showNoteList(data){
 
 function showFloorList(data){
     var floorListHtml = "";
-    floorListHtml = floorListHtml + "<h3 id=\"comments-title\">("+(nowFloorNumber-1)+") Comments</h3>";
+    floorListHtml = floorListHtml + "<h3 id=\"comments-title\"><a name=\"comment_title\">("+(nowFloorNumber-1)+") Comments</a></h3>";
     floorListHtml = floorListHtml + "<ol class=\"commentlist\">\n";
     $(data).each(function(key,obj){
         if (obj.floorNumber!=1) {//1是内容

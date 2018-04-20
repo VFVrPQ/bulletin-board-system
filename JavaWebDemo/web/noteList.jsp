@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page session="true" %>
-<jsp:include page="Global/head.jsp"/>
+<jsp:include page="Global/head.jsp?currentMenuItem=noteList"/>
 
 <!-- Start of Page Container -->
 <div class="page-container">
@@ -75,5 +75,4 @@
 <script type="text/javascript" src="Global/global.js"></script>
 <script type="text/javascript" src='js/noteList.js'></script>
 
-<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 <jsp:include page="Global/footer.jsp" />

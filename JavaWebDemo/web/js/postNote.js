@@ -40,7 +40,6 @@ function postSuccess(data){
         alert("发帖失败！");
     }else{
         //alert("发帖成功！");
-        //window.location.href="../index.html";
         getNoteId(data);
         var userId = noteOwner;
         var floorNumber = "1";

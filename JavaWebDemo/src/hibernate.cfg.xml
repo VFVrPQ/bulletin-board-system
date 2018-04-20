@@ -9,6 +9,8 @@
         <mapping class="cn.vfvrpq.entity.NoteEntity"/>
         <mapping class="cn.vfvrpq.entity.UserEntity"/>
         <mapping class="cn.vfvrpq.entity.UserNoteEntity"/>
+        <mapping class="cn.vfvrpq.entity.NoteListEntity"/>
+        <mapping class="cn.vfvrpq.entity.CommentEntity"/>
 
     </session-factory>
 </hibernate-configuration>

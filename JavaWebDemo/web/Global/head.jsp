@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.io.*,java.util.*" %>
+
 <!doctype html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
@@ -42,6 +44,9 @@
 
 <body>
 
+<%
+    String currentMenuItem = request.getParameter("currentMenuItem");
+%>
 <!-- Start of Header -->
 <div class="header-wrapper">
     <header>
@@ -50,7 +55,7 @@
 
             <div class="logo-container">
                 <!-- Website Logo -->
-                <a href="index-2.html"  title="Knowledge Base Theme">
+                <a href="noteList.jsp"  title="Knowledge Base Theme">
                     <img src="images/logo.png" alt="Knowledge Base Theme">
                 </a>
                 <span class="tag-line">Premium WordPress Theme</span>
@@ -61,12 +66,36 @@
             <nav class="main-nav">
                 <div class="menu-top-menu-container">
                     <ul id="menu-top-menu" class="clearfix">
-                        <li  class="current-menu-item"><a href="noteList.jsp">首页</a></li>
 
-                        <li><a href="register.jsp">注册</a></li>
-                        <li>
-                            <div id="login_li"></div>
-                        </li>
+
+                        <% if (currentMenuItem==null || currentMenuItem.equals("noteList")) {%>
+                            <li class="current-menu-item">
+                        <% } else { %>
+                            <li>
+                        <% } %>
+                        <a href="noteList.jsp">首页</a></li>
+
+                        <% if (currentMenuItem!=null && currentMenuItem.equals("postNote")) {%>
+                            <li class="current-menu-item">
+                        <% } else {%>
+                            <li>
+                        <% } %>
+                        <a href="postNote.jsp">发帖</a></li>
+
+                        <% if (currentMenuItem!=null && currentMenuItem.equals("register")) {%>
+                            <li class="current-menu-item">
+                        <% } else {%>
+                            <li>
+                        <% }%>
+                        <a href="register.jsp">注册</a></li>
+
+
+                        <% if (currentMenuItem!=null && currentMenuItem.equals("login")) {%>
+                            <li class="current-menu-item">
+                        <% } else {%>
+                            <li>
+                        <% } %>
+                            <div id="login_li"></div></li>
                     </ul>
                 </div>
             </nav>
