@@ -3,7 +3,6 @@ package cn.vfvrpq.action;
 import cn.vfvrpq.cause.ResultCause;
 import cn.vfvrpq.entity.NoteListEntity;
 import cn.vfvrpq.service.NoteListService;
-import com.sun.tools.javap.TypeAnnotationWriter;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;

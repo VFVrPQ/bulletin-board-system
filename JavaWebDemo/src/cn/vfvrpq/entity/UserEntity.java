@@ -1,18 +1,20 @@
 package cn.vfvrpq.entity;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
-@Table(name = "user", schema = "bulletin", catalog = "")
+@Table(name = "user", schema = "SCOTT", catalog = "")
 public class UserEntity {
     private String userName;
     private String userId;
     private String userSex;
     private String userType;
     private String userPwd;
+    private Collection<UserNoteEntity> usernotesByUserid;
 
     @Basic
-    @Column(name = "userName", nullable = true, length = 255)
+    @Column(name = "USERNAME", nullable = true, length = 255)
     public String getUserName() {
         return userName;
     }
@@ -22,7 +24,7 @@ public class UserEntity {
     }
 
     @Id
-    @Column(name = "userId", nullable = false, length = 45)
+    @Column(name = "USERID", nullable = false, length = 45)
     public String getUserId() {
         return userId;
     }
@@ -32,7 +34,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "userSex", nullable = true, length = 2)
+    @Column(name = "USERSEX", nullable = true, length = 4)
     public String getUserSex() {
         return userSex;
     }
@@ -42,7 +44,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "userType", nullable = true, length = 10)
+    @Column(name = "USERTYPE", nullable = true, length = 10)
     public String getUserType() {
         return userType;
     }
@@ -52,7 +54,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "userPwd", nullable = false, length = 45)
+    @Column(name = "USERPWD", nullable = false, length = 45)
     public String getUserPwd() {
         return userPwd;
     }
@@ -85,5 +87,14 @@ public class UserEntity {
         result = 31 * result + (userType != null ? userType.hashCode() : 0);
         result = 31 * result + (userPwd != null ? userPwd.hashCode() : 0);
         return result;
+    }
+
+    @OneToMany(mappedBy = "userByUserid")
+    public Collection<UserNoteEntity> getUsernotesByUserid() {
+        return usernotesByUserid;
+    }
+
+    public void setUsernotesByUserid(Collection<UserNoteEntity> usernotesByUserid) {
+        this.usernotesByUserid = usernotesByUserid;
     }
 }

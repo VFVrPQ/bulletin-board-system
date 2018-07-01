@@ -1,0 +1,8 @@
+CREATE OR REPLACE TRIGGER BEF_UPDATE_NOTE
+BEFORE UPDATE
+  ON NOTE
+FOR EACH ROW
+  BEGIN
+    select  sysdate into :NEW.notetime from dual;
+  END;
+/

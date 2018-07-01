@@ -1,7 +1,6 @@
 package cn.vfvrpq.dao.impl;
 
 import cn.vfvrpq.dao.DaoManager;
-import cn.vfvrpq.dao.UserDao;
 import cn.vfvrpq.dao.UserNoteDao;
 import cn.vfvrpq.entity.UserNoteEntity;
 import org.springframework.stereotype.Repository;

@@ -4,30 +4,31 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.sql.Time;
 
 @Entity
-@Table(name = "comment", schema = "bulletin", catalog = "")
+@Table(name = "comment", schema = "SCOTT", catalog = "")
 public class CommentEntity {
-    private int noteId;
+    private long noteId;
     private String userId;
-    private int floorNumber;
+    private long floorNumber;
     private String content;
     private String floorType;
-    private String floorTime;
+    private Time floorTime;
     private String userName;
 
     @Basic
-    @Column(name = "noteId", nullable = false)
-    public int getNoteId() {
+    @Column(name = "NOTEID", nullable = false, precision = 0)
+    public long getNoteId() {
         return noteId;
     }
 
-    public void setNoteId(int noteId) {
+    public void setNoteId(long noteId) {
         this.noteId = noteId;
     }
 
     @Basic
-    @Column(name = "userId", nullable = true, length = 45)
+    @Column(name = "USERID", nullable = true, length = 45)
     public String getUserId() {
         return userId;
     }
@@ -37,17 +38,17 @@ public class CommentEntity {
     }
 
     @Basic
-    @Column(name = "floorNumber", nullable = false)
-    public int getFloorNumber() {
+    @Column(name = "FLOORNUMBER", nullable = false, precision = 0)
+    public long getFloorNumber() {
         return floorNumber;
     }
 
-    public void setFloorNumber(int floorNumber) {
+    public void setFloorNumber(long floorNumber) {
         this.floorNumber = floorNumber;
     }
 
     @Basic
-    @Column(name = "content", nullable = true, length = 10000)
+    @Column(name = "CONTENT", nullable = true, length = 4000)
     public String getContent() {
         return content;
     }
@@ -57,7 +58,7 @@ public class CommentEntity {
     }
 
     @Basic
-    @Column(name = "floorType", nullable = true, length = 45)
+    @Column(name = "FLOORTYPE", nullable = true, length = 45)
     public String getFloorType() {
         return floorType;
     }
@@ -67,17 +68,17 @@ public class CommentEntity {
     }
 
     @Basic
-    @Column(name = "floorTime", nullable = true, length = 255)
-    public String getFloorTime() {
+    @Column(name = "FLOORTIME", nullable = true)
+    public Time getFloorTime() {
         return floorTime;
     }
 
-    public void setFloorTime(String floorTime) {
+    public void setFloorTime(Time floorTime) {
         this.floorTime = floorTime;
     }
 
     @Basic
-    @Column(name = "userName", nullable = true, length = 255)
+    @Column(name = "USERNAME", nullable = true, length = 255)
     public String getUserName() {
         return userName;
     }
@@ -106,9 +107,9 @@ public class CommentEntity {
 
     @Override
     public int hashCode() {
-        int result = noteId;
+        int result = (int) (noteId ^ (noteId >>> 32));
         result = 31 * result + (userId != null ? userId.hashCode() : 0);
-        result = 31 * result + floorNumber;
+        result = 31 * result + (int) (floorNumber ^ (floorNumber >>> 32));
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (floorType != null ? floorType.hashCode() : 0);
         result = 31 * result + (floorTime != null ? floorTime.hashCode() : 0);

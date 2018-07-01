@@ -1,7 +1,6 @@
 package cn.vfvrpq.service.impl;
 
 import cn.vfvrpq.dao.UserNoteDao;
-import cn.vfvrpq.entity.NoteEntity;
 import cn.vfvrpq.entity.UserNoteEntity;
 import cn.vfvrpq.service.UserNoteService;
 import org.springframework.stereotype.Service;
@@ -56,9 +55,9 @@ public class UserNoteServiceImpl implements UserNoteService {
             if (userId==null) userId = userNoteEntity.getUserId();
             if (content==null) content = userNoteEntity.getContent();
             if (floorType==null) floorType = userNoteEntity.getFloorType();
-            if (floorTime==null) floorTime = userNoteEntity.getFloorTime();
+            //if (floorTime==null) floorTime = userNoteEntity.getFloorTime();
         }
-        String sql = "update userNote set userId = ?, content = ?, floorType = ?, floorTime = ? where noteId = ? and floorNumber = ?";
-        return userNoteDao.updateData(sql, new Object[]{userId, content, floorType, floorTime, noteId, floorNumber});
+        String sql = "update userNote set userId = ?, content = ?, floorType = ? where noteId = ? and floorNumber = ?";
+        return userNoteDao.updateData(sql, new Object[]{userId, content, floorType, noteId, floorNumber});
     }
 }

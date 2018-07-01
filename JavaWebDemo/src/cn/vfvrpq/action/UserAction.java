@@ -24,6 +24,7 @@ public class UserAction {
      * @return
      */
     public String register(){
+        //System.out.println(userId + ", " + userPwd + ", " + userName + ", " + userType + ", " + userSex);
         UserEntity userEntity = new UserEntity();
         userEntity.setUserId(userId);
         userEntity.setUserPwd(userPwd);

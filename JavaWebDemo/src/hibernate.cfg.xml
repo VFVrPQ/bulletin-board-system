@@ -4,13 +4,12 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/bulletin</property>
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:oracle:thin:@192.168.99.100:49161:XE</property>
+        <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
         <mapping class="cn.vfvrpq.entity.NoteEntity"/>
         <mapping class="cn.vfvrpq.entity.UserEntity"/>
         <mapping class="cn.vfvrpq.entity.UserNoteEntity"/>
         <mapping class="cn.vfvrpq.entity.NoteListEntity"/>
         <mapping class="cn.vfvrpq.entity.CommentEntity"/>
-
     </session-factory>
 </hibernate-configuration>

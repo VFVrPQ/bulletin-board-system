@@ -47,7 +47,7 @@
     <orderEntry type="library" name="Spring-4.3.4" level="project" />
     <orderEntry type="library" name="Struts2 2.3" level="project" />
     <orderEntry type="library" name="antlr-2.7.7" level="project" />
-    <orderEntry type="library" name="mysql-connector-java-5.1.40" level="project" />
     <orderEntry type="library" name="dbcp2" level="project" />
+    <orderEntry type="library" name="ojdbc6" level="project" />
   </component>
 </module>

@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     public boolean addData(UserEntity userEntity) {
         if (isExist(userEntity.getUserId())) return false;
         StringBuffer sql = new StringBuffer();
-        sql.append("insert into user (userId,userPwd");
+        sql.append("insert into \"user\" (userId,userPwd");
         if (userEntity.getUserType()!=null) sql.append(",userType");
         if (userEntity.getUserName()!=null) sql.append(",userName");
         if (userEntity.getUserSex() !=null) sql.append(",userSex");
@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean isExist(String userId) {
-        String sql = "select * from user where userId = ?";
+        String sql = "select * from \"user\" where userId = ?";
         List<UserEntity> userEntity = userDao.getData(sql, new Object[]{userId});
         if (userEntity.size()==0) return false;
         return true;
@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean login(String userId, String userPwd) {
-        String sql = "select * from user where userId = ? and userPwd = ?";
+        String sql = "select * from \"user\" where userId = ? and userPwd = ?";
         List<UserEntity> userEntity = userDao.getData(sql, new Object[]{userId,userPwd});
         if (userEntity.size()==0) return false;
         return true;
@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserEntity> getData(String userId) {
-        String sql = "select * from user where userId = ?";
+        String sql = "select * from \"user\" where userId = ?";
         return  userDao.getData(sql, new Object[]{userId});
     }
 }

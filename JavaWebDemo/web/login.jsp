@@ -15,7 +15,7 @@
                                                                 <a href="#">登录</a>
                                                         </h1>
                                                         <hr>
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                                        <p>请填写学号和密码。</p>
                                                 </article>
 
 
@@ -53,37 +53,10 @@
 
                                                 <section class="widget">
                                                         <div class="support-widget">
-                                                                <h3 class="title">Support</h3>
-                                                                <p class="intro">Need more support? If you did not found an answer, contact us for further help.</p>
+                                                                <h3 class="title">帮助</h3>
+                                                                <p class="intro">需要帮助吗？请联系我们<a href="mailto:admin@vfvrpq.cn">admin@vfvrpq.cn</a></p>
                                                         </div>
                                                 </section>
-
-                                                <section class="widget">
-                                                        <h3 class="title">Latest Articles</h3>
-                                                        <ul class="articles">
-                                                                <li class="article-entry standard">
-                                                                        <h4><a href="single.html">Integrating WordPress with Your Website</a></h4>
-                                                                        <span class="article-meta">25 Feb, 2013 in <a href="#" title="View all posts in Server &amp; Database">Server &amp; Database</a></span>
-                                                                        <span class="like-count">66</span>
-                                                                </li>
-                                                                <li class="article-entry standard">
-                                                                        <h4><a href="single.html">WordPress Site Maintenance</a></h4>
-                                                                        <span class="article-meta">24 Feb, 2013 in <a href="#" title="View all posts in Website Dev">Website Dev</a></span>
-                                                                        <span class="like-count">15</span>
-                                                                </li>
-                                                                <li class="article-entry video">
-                                                                        <h4><a href="single.html">Meta Tags in WordPress</a></h4>
-                                                                        <span class="article-meta">23 Feb, 2013 in <a href="#" title="View all posts in Website Dev">Website Dev</a></span>
-                                                                        <span class="like-count">8</span>
-                                                                </li>
-                                                                <li class="article-entry image">
-                                                                        <h4><a href="single.html">WordPress in Your Language</a></h4>
-                                                                        <span class="article-meta">22 Feb, 2013 in <a href="#" title="View all posts in Advanced Techniques">Advanced Techniques</a></span>
-                                                                        <span class="like-count">6</span>
-                                                                </li>
-                                                        </ul>
-                                                </section>
-
 
                                         </aside>
                                         <!-- end of sidebar -->

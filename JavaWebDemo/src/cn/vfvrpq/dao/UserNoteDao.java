@@ -1,6 +1,5 @@
 package cn.vfvrpq.dao;
 
-import cn.vfvrpq.entity.UserEntity;
 import cn.vfvrpq.entity.UserNoteEntity;
 
 import java.util.List;

@@ -6,6 +6,7 @@ import cn.vfvrpq.service.NoteService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.sql.Time;
 import java.util.List;
 
 /**
@@ -18,7 +19,11 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public Boolean addData(NoteEntity noteEntity) {
-        String sql = "insert into note (noteNumber,noteName,noteType,noteOwner,noteTime) values (:noteNumber,:noteName,:noteType,:noteOwner,:noteTime)";
+        String sql;
+        if (noteEntity.getNoteType() == null)
+            sql = "insert into note (noteNumber,noteName,noteOwner) values (:noteNumber,:noteName,:noteOwner)";
+        else
+            sql = "insert into note (noteNumber,noteName,noteType,noteOwner) values (:noteNumber,:noteName,:noteType,:noteOwner)";
         return noteDao.addData(sql, noteEntity);
     }
 
@@ -51,8 +56,10 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public List<NoteEntity> getDataByOthers(String noteNumber, String noteName, String noteType, String noteOwner, String noteTime) {
-        String sql = "select * from note where noteNumber = ? and noteName = ? and noteType = ? and noteOwner = ? and noteTime = ?";
-        return noteDao.getData(sql, new Object[]{noteNumber,noteName,noteType,noteOwner,noteTime});
+        String sql;
+        if (noteType==null) noteType="普通";
+        sql = "select * from note where noteNumber = ? and noteName = ? and noteType = ? and noteOwner = ? order by noteTime desc";
+        return noteDao.getData(sql, new Object[]{noteNumber,noteName,noteType,noteOwner});
     }
 
     @Override
@@ -65,10 +72,10 @@ public class NoteServiceImpl implements NoteService {
             if (noteName==null) noteName = noteEntity.getNoteName();
             if (noteType==null) noteType = noteEntity.getNoteType();
             if (noteOwner==null) noteOwner = noteEntity.getNoteOwner();
-            if (noteTime==null) noteTime = noteEntity.getNoteTime();
+            //if (noteTime==null) noteTime = noteEntity.getNoteTime();
         }
-        String sql = "update note set noteNumber = ?, noteName = ?, noteType = ?, noteOwner = ?, noteTime = ? where noteId = ?";
-        return noteDao.updateData(sql, new Object[]{noteNumber, noteName, noteType, noteOwner, noteTime, noteId});
+        String sql = "update note set noteNumber = ?, noteName = ?, noteType = ?, noteOwner = ? where noteId = ?";
+        return noteDao.updateData(sql, new Object[]{noteNumber, noteName, noteType, noteOwner, noteId});
     }
 
     public NoteDao getNoteDao() {

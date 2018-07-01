@@ -1,29 +1,32 @@
 package cn.vfvrpq.entity;
 
 import javax.persistence.*;
+import java.sql.Time;
+import java.util.Collection;
 
 @Entity
-@Table(name = "note", schema = "bulletin", catalog = "")
+@Table(name = "NOTE", schema = "SCOTT", catalog = "")
 public class NoteEntity {
-    private int noteId;
+    private long noteId;
     private String noteNumber;
     private String noteName;
     private String noteType;
     private String noteOwner;
-    private String noteTime;
+    private Time noteTime;
+    private Collection<UserNoteEntity> usernotesByNoteid;
 
     @Id
-    @Column(name = "noteId", nullable = false)
-    public int getNoteId() {
+    @Column(name = "NOTEID", nullable = false, precision = 0)
+    public long getNoteId() {
         return noteId;
     }
 
-    public void setNoteId(int noteId) {
+    public void setNoteId(long noteId) {
         this.noteId = noteId;
     }
 
     @Basic
-    @Column(name = "noteNumber", nullable = true, length = 45)
+    @Column(name = "NOTENUMBER", nullable = false, length = 45)
     public String getNoteNumber() {
         return noteNumber;
     }
@@ -33,7 +36,7 @@ public class NoteEntity {
     }
 
     @Basic
-    @Column(name = "noteName", nullable = true, length = 255)
+    @Column(name = "NOTENAME", nullable = false, length = 255)
     public String getNoteName() {
         return noteName;
     }
@@ -43,7 +46,7 @@ public class NoteEntity {
     }
 
     @Basic
-    @Column(name = "noteType", nullable = true, length = 45)
+    @Column(name = "NOTETYPE", nullable = false, length = 45)
     public String getNoteType() {
         return noteType;
     }
@@ -53,13 +56,23 @@ public class NoteEntity {
     }
 
     @Basic
-    @Column(name = "noteOwner", nullable = true, length = 45)
+    @Column(name = "NOTEOWNER", nullable = true, length = 45)
     public String getNoteOwner() {
         return noteOwner;
     }
 
     public void setNoteOwner(String noteOwner) {
         this.noteOwner = noteOwner;
+    }
+
+    @Basic
+    @Column(name = "NOTETIME", nullable = true)
+    public Time getNoteTime() {
+        return noteTime;
+    }
+
+    public void setNoteTime(Time noteTime) {
+        this.noteTime = noteTime;
     }
 
     @Override
@@ -74,27 +87,28 @@ public class NoteEntity {
         if (noteName != null ? !noteName.equals(that.noteName) : that.noteName != null) return false;
         if (noteType != null ? !noteType.equals(that.noteType) : that.noteType != null) return false;
         if (noteOwner != null ? !noteOwner.equals(that.noteOwner) : that.noteOwner != null) return false;
+        if (noteTime != null ? !noteTime.equals(that.noteTime) : that.noteTime != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = noteId;
+        int result = (int) (noteId ^ (noteId >>> 32));
         result = 31 * result + (noteNumber != null ? noteNumber.hashCode() : 0);
         result = 31 * result + (noteName != null ? noteName.hashCode() : 0);
         result = 31 * result + (noteType != null ? noteType.hashCode() : 0);
         result = 31 * result + (noteOwner != null ? noteOwner.hashCode() : 0);
+        result = 31 * result + (noteTime != null ? noteTime.hashCode() : 0);
         return result;
     }
 
-    @Basic
-    @Column(name = "noteTime", nullable = true, length = 255)
-    public String getNoteTime() {
-        return noteTime;
+    @OneToMany(mappedBy = "noteByNoteid")
+    public Collection<UserNoteEntity> getUsernotesByNoteid() {
+        return usernotesByNoteid;
     }
 
-    public void setNoteTime(String noteTime) {
-        this.noteTime = noteTime;
+    public void setUsernotesByNoteid(Collection<UserNoteEntity> usernotesByNoteid) {
+        this.usernotesByNoteid = usernotesByNoteid;
     }
 }

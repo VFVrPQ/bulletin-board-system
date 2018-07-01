@@ -34,7 +34,76 @@
                 <param name="excludeNullProperties">true</param>
                 <param name="excludeProperties">SUCCESS</param>
             </result>
-
+        </action>
+        <action name="note_*" class="noteAction" method="{1}">
+            <result name="ADD_SUCCESS" type="json">
+                <param name="root">noteEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+            <result name="ADD_FAIL" type="json">
+                <param name="root">result</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+            <result name="DEL_SUCCESS" type="json">
+                <param name="root">result</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+            <result name="GET_SUCCESS" type="json">
+                <param name="root">noteEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+            <result name="UPDATE_SUCCESS" type="json">
+                <param name="root">result</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+        </action>
+        <action name="userNote_*" class="userNoteAction" method="{1}">
+            <result name="ADD_SUCCESS" type="json">
+                <param name="root">result</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+            <result name="DEL_SUCCESS" type="json">
+                <param name="root">result</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+            <result name="GET_SUCCESS" type="json">
+                <param name="root">userNoteEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+            <result name="UPDATE_SUCCESS" type="json">
+                <param name="root">result</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+        </action>
+        <action name="noteList_*" class="noteListAction" method="{1}">
+            <result name="GET_SUCCESS" type="json">
+                <param name="root">noteListEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+        </action>
+        <action name="comment_*" class="commentAction" method="{1}">
+            <result name="GET_SUCCESS" type="json">
+                <param name="root">commentEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
+        </action>
+        <action name="search_*" class="searchAction" method="{1}">
+            <result name="GET_SUCCESS" type="json">
+                <param name="root">noteListEntityList</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="excludeProperties">SUCCESS</param>
+            </result>
         </action>
     </package>
 </struts>

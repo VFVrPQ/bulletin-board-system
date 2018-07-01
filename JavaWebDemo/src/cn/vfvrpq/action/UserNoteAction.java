@@ -1,13 +1,12 @@
 package cn.vfvrpq.action;
 
 import cn.vfvrpq.cause.ResultCause;
-import cn.vfvrpq.entity.NoteEntity;
 import cn.vfvrpq.entity.UserNoteEntity;
-import cn.vfvrpq.service.NoteService;
 import cn.vfvrpq.service.UserNoteService;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
+import java.sql.Time;
 import java.util.List;
 
 /**
@@ -56,7 +55,7 @@ public class UserNoteAction {
         userNoteEntity.setFloorNumber(Integer.parseInt(floorNumber));
         userNoteEntity.setFloorType(floorType);
         userNoteEntity.setUserId(userId);
-        userNoteEntity.setFloorTime(floorTime);
+        //userNoteEntity.setFloorTime((Time)floorTime);
         if (userNoteService.addData(userNoteEntity)){
             result.setCause("200", "ADD_SUCCESS");
         }else{

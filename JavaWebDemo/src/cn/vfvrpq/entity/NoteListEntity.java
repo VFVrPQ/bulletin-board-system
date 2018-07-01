@@ -4,33 +4,34 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.sql.Time;
 
 @Entity
-@Table(name = "notelist", schema = "bulletin", catalog = "")
+@Table(name = "NOTELIST", schema = "SCOTT", catalog = "")
 public class NoteListEntity {
-    private int noteId;
+    private long noteId;
     private String noteNumber;
     private String noteName;
     private String noteType;
     private String noteOwner;
-    private String noteTime;
+    private Time noteTime;
     private String userId;
     private String content;
-    private long number;
     private String userName;
+    private Long number;
 
     @Basic
-    @Column(name = "noteId", nullable = false)
-    public int getNoteId() {
+    @Column(name = "NOTEID", nullable = false, precision = 0)
+    public long getNoteId() {
         return noteId;
     }
 
-    public void setNoteId(int noteId) {
+    public void setNoteId(long noteId) {
         this.noteId = noteId;
     }
 
     @Basic
-    @Column(name = "noteNumber", nullable = true, length = 45)
+    @Column(name = "NOTENUMBER", nullable = false, length = 45)
     public String getNoteNumber() {
         return noteNumber;
     }
@@ -40,7 +41,7 @@ public class NoteListEntity {
     }
 
     @Basic
-    @Column(name = "noteName", nullable = true, length = 255)
+    @Column(name = "NOTENAME", nullable = false, length = 255)
     public String getNoteName() {
         return noteName;
     }
@@ -50,7 +51,7 @@ public class NoteListEntity {
     }
 
     @Basic
-    @Column(name = "noteType", nullable = true, length = 45)
+    @Column(name = "NOTETYPE", nullable = false, length = 45)
     public String getNoteType() {
         return noteType;
     }
@@ -60,7 +61,7 @@ public class NoteListEntity {
     }
 
     @Basic
-    @Column(name = "noteOwner", nullable = true, length = 45)
+    @Column(name = "NOTEOWNER", nullable = true, length = 45)
     public String getNoteOwner() {
         return noteOwner;
     }
@@ -70,17 +71,17 @@ public class NoteListEntity {
     }
 
     @Basic
-    @Column(name = "noteTime", nullable = true, length = 255)
-    public String getNoteTime() {
+    @Column(name = "NOTETIME", nullable = true)
+    public Time getNoteTime() {
         return noteTime;
     }
 
-    public void setNoteTime(String noteTime) {
+    public void setNoteTime(Time noteTime) {
         this.noteTime = noteTime;
     }
 
     @Basic
-    @Column(name = "userId", nullable = true, length = 45)
+    @Column(name = "USERID", nullable = true, length = 45)
     public String getUserId() {
         return userId;
     }
@@ -90,7 +91,7 @@ public class NoteListEntity {
     }
 
     @Basic
-    @Column(name = "content", nullable = true, length = 10000)
+    @Column(name = "CONTENT", nullable = true, length = 4000)
     public String getContent() {
         return content;
     }
@@ -100,12 +101,22 @@ public class NoteListEntity {
     }
 
     @Basic
-    @Column(name = "number", nullable = false)
-    public long getNumber() {
+    @Column(name = "USERNAME", nullable = true, length = 255)
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    @Basic
+    @Column(name = "number", nullable = true, precision = 0)
+    public Long getNumber() {
         return number;
     }
 
-    public void setNumber(long number) {
+    public void setNumber(Long number) {
         this.number = number;
     }
 
@@ -117,7 +128,6 @@ public class NoteListEntity {
         NoteListEntity that = (NoteListEntity) o;
 
         if (noteId != that.noteId) return false;
-        if (number != that.number) return false;
         if (noteNumber != null ? !noteNumber.equals(that.noteNumber) : that.noteNumber != null) return false;
         if (noteName != null ? !noteName.equals(that.noteName) : that.noteName != null) return false;
         if (noteType != null ? !noteType.equals(that.noteType) : that.noteType != null) return false;
@@ -125,13 +135,15 @@ public class NoteListEntity {
         if (noteTime != null ? !noteTime.equals(that.noteTime) : that.noteTime != null) return false;
         if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
         if (content != null ? !content.equals(that.content) : that.content != null) return false;
+        if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
+        if (number != null ? !number.equals(that.number) : that.number != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = noteId;
+        int result = (int) (noteId ^ (noteId >>> 32));
         result = 31 * result + (noteNumber != null ? noteNumber.hashCode() : 0);
         result = 31 * result + (noteName != null ? noteName.hashCode() : 0);
         result = 31 * result + (noteType != null ? noteType.hashCode() : 0);
@@ -139,17 +151,8 @@ public class NoteListEntity {
         result = 31 * result + (noteTime != null ? noteTime.hashCode() : 0);
         result = 31 * result + (userId != null ? userId.hashCode() : 0);
         result = 31 * result + (content != null ? content.hashCode() : 0);
-        result = 31 * result + (int) (number ^ (number >>> 32));
+        result = 31 * result + (userName != null ? userName.hashCode() : 0);
+        result = 31 * result + (number != null ? number.hashCode() : 0);
         return result;
-    }
-
-    @Basic
-    @Column(name = "userName", nullable = true, length = 255)
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 }

@@ -1,6 +1,5 @@
 package cn.vfvrpq.service;
 
-import cn.vfvrpq.entity.NoteEntity;
 import cn.vfvrpq.entity.UserNoteEntity;
 
 import java.util.List;

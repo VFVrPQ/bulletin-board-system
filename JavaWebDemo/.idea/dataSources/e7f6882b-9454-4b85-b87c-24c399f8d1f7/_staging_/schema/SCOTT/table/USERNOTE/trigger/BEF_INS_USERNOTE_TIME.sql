@@ -1,0 +1,8 @@
+CREATE TRIGGER BEF_INS_USERNOTE_TIME
+BEFORE INSERT OR UPDATE
+  ON USERNOTE
+FOR EACH ROW
+  begin
+    select  sysdate into :NEW.FLOORTIME from dual;
+  end;
+/

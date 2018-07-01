@@ -46,7 +46,7 @@ public class NoteListServiceImpl implements NoteListService {
         Integer endNum   = (page+1)*pageNumber;
         endNum = Math.min(endNum, noteListEntityList.size());
 
-        noteListEntityList.get(endNum-1).setNumber(noteListEntityList.size());
+        noteListEntityList.get(endNum-1).setNumber((long) noteListEntityList.size());
         return noteListEntityList.subList(beginNum, endNum);
     }
 

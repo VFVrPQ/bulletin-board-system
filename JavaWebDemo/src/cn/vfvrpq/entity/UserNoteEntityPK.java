@@ -1,33 +1,31 @@
 package cn.vfvrpq.entity;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
 
 public class UserNoteEntityPK implements Serializable {
-    private int noteId;
-    private String userId;
-    private Integer floorNumber;
+    private long noteId;
+    private long floorNumber;
 
-    @Column(name = "noteId", nullable = false)
+    @Column(name = "NOTEID", nullable = false, precision = 0)
     @Id
-    public int getNoteId() {
+    public long getNoteId() {
         return noteId;
     }
 
-    public void setNoteId(int noteId) {
+    public void setNoteId(long noteId) {
         this.noteId = noteId;
     }
 
-    @Column(name = "userId", nullable = false, length = 45)
+    @Column(name = "FLOORNUMBER", nullable = false, precision = 0)
     @Id
-    public String getUserId() {
-        return userId;
+    public long getFloorNumber() {
+        return floorNumber;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setFloorNumber(long floorNumber) {
+        this.floorNumber = floorNumber;
     }
 
     @Override
@@ -38,26 +36,15 @@ public class UserNoteEntityPK implements Serializable {
         UserNoteEntityPK that = (UserNoteEntityPK) o;
 
         if (noteId != that.noteId) return false;
-        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
+        if (floorNumber != that.floorNumber) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = noteId;
-        result = 31 * result + (userId != null ? userId.hashCode() : 0);
+        int result = (int) (noteId ^ (noteId >>> 32));
+        result = 31 * result + (int) (floorNumber ^ (floorNumber >>> 32));
         return result;
-    }
-
-    @Column(name = "floorNumber", nullable = false)
-    @Basic
-    @Id
-    public Integer getFloorNumber() {
-        return floorNumber;
-    }
-
-    public void setFloorNumber(Integer floorNumber) {
-        this.floorNumber = floorNumber;
     }
 }

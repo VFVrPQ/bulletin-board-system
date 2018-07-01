@@ -6,25 +6,70 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2918e532-5367-4468-b73b-b02608fd5c3a" name="Default" comment="实现三张表的后端">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/action/NoteAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/action/UserNoteAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/dao/UserNoteDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/UserNoteDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/service/UserNoteService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserNoteServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+    <list default="true" id="2918e532-5367-4468-b73b-b02608fd5c3a" name="Default" comment="实现了帖子展示，个别帖子之间的切换。&#10;基本实现所有页面，剩下的是要整合。">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/fail.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/index.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/action/UserAction.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/action/UserAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/entity/NoteEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/entity/NoteEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/entity/UserEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/entity/UserEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/entity/UserNoteEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/entity/UserNoteEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/entity/UserNoteEntityPK.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/entity/UserNoteEntityPK.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/cn/vfvrpq/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/action/UserAction.class" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/action/UserAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/entity/NoteEntity.class" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/entity/NoteEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/entity/UserEntity.class" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/entity/UserEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/entity/UserNoteEntity.class" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/entity/UserNoteEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/entity/UserNoteEntityPK.class" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/entity/UserNoteEntityPK.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/cn/vfvrpq/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/JavaWebDemo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaWebDemo_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/900f45f7-a601-4373-bc75-6e868e7d8e62.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/900f45f7-a601-4373-bc75-6e868e7d8e62.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaWebDemo.iml" afterPath="$PROJECT_DIR$/JavaWebDemo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/dbcp2.properties" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/dbcp2.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/res/bulletin.sql" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/res/bulletin.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/classes/struts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/register.jsp" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebDemo_war_exploded/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/dbcp2.properties" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/dbcp2.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/res/bulletin.sql" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/res/bulletin.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWebDemo/struts.xml" afterPath="$PROJECT_DIR$/out/production/JavaWebDemo/struts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/action/NoteAction.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/action/NoteAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/action/SearchAction.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/action/SearchAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/action/UserAction.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/action/UserAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/action/UserNoteAction.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/action/UserNoteAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/dao/NoteDao.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/dao/NoteDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/dao/UserNoteDao.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/dao/UserNoteDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/UserNoteDaoImpl.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/UserNoteDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/entity/CommentEntity.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/entity/CommentEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/entity/NoteEntity.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/entity/NoteEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/entity/NoteListEntity.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/entity/NoteListEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/entity/UserEntity.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/entity/UserEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/entity/UserNoteEntity.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/entity/UserNoteEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/entity/UserNoteEntityPK.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/entity/UserNoteEntityPK.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/service/NoteService.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/service/NoteService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/service/UserNoteService.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/service/UserNoteService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/CommentServiceImpl.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/CommentServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteListServiceImpl.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteListServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteServiceImpl.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/res/bulletin.sql" afterPath="$PROJECT_DIR$/src/res/bulletin.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserNoteServiceImpl.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserNoteServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dbcp2.properties" afterPath="$PROJECT_DIR$/src/dbcp2.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Global/footer.jsp" afterPath="$PROJECT_DIR$/web/Global/footer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Global/head.jsp" afterPath="$PROJECT_DIR$/web/Global/head.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/noteList.js" afterPath="$PROJECT_DIR$/web/js/noteList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/postNote.js" afterPath="$PROJECT_DIR$/web/js/postNote.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/singleNote.js" afterPath="$PROJECT_DIR$/web/js/singleNote.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login.jsp" afterPath="$PROJECT_DIR$/web/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/noteList.jsp" afterPath="$PROJECT_DIR$/web/noteList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/postNote.jsp" afterPath="$PROJECT_DIR$/web/postNote.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/register.jsp" afterPath="$PROJECT_DIR$/web/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/singleNote.jsp" afterPath="$PROJECT_DIR$/web/singleNote.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,165 +95,149 @@
     <expand>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="bulletin@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="@192.168.99.100" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="bulletin@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="bulletin" type="e3449647:DbNodeDescriptor" />
+        <item name="@192.168.99.100" type="e3449647:DbNodeDescriptor" />
+        <item name="SCOTT" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="bulletin@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="bulletin" type="e3449647:DbNodeDescriptor" />
-        <item name="user" type="e3449647:DbNodeDescriptor" />
+        <item name="@192.168.99.100" type="e3449647:DbNodeDescriptor" />
+        <item name="SCOTT" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="@192.168.99.100" type="e3449647:DbNodeDescriptor" />
+        <item name="SCOTT" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
       </path>
     </expand>
     <select />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="JavaWebDemo" />
+    <favorites_list name="JavaWebDemo">
+      <favorite_root url="file://$PROJECT_DIR$/web/js/custom.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/custom5152.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/head.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jflickrfeed.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jquery.easing.1.3.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jquery.easing.1.34e44.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jquery.form.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jquery.formd471.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jquery.liveSearch.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jquery.liveSearchd5f7.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jquery.validate.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jquery.validate.minfc6b.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/jquery-1.8.3.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/login.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/web/js/logout.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/UserService.java">
+      <file leaf-file-name="singleNote.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/singleNote.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="238">
+              <caret line="58" column="66" lean-forward="false" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NoteServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteServiceImpl.java">
+      <file leaf-file-name="singleNote.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/singleNote.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="174">
+              <caret line="60" column="117" lean-forward="false" selection-start-line="60" selection-start-column="117" selection-end-line="60" selection-end-column="117" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1530434318560" expanded="true" signature="2062:2068" ph="&amp;nbsp;" />
+                <marker date="1530434318560" expanded="true" signature="2068:2074" ph="&amp;nbsp;" />
+                <marker date="1530434318560" expanded="true" signature="2258:2264" ph="&amp;nbsp;" />
+                <marker date="1530434318560" expanded="true" signature="2264:2270" ph="&amp;nbsp;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserServiceImpl.java">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="45" column="5" selection-start-line="44" selection-start-column="20" selection-end-line="45" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserNoteService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/UserNoteService.java">
+      <file leaf-file-name="noteList.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/noteList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserNoteServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserNoteServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NoteAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/NoteAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserNoteAction.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/UserNoteAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="25" />
-              <folding>
-                <element signature="e#2117#2118#0" expanded="true" />
-                <element signature="e#2155#2156#0" expanded="true" />
-                <element signature="e#2226#2227#0" expanded="true" />
-                <element signature="e#2280#2281#0" expanded="true" />
-                <element signature="e#2318#2319#0" expanded="true" />
-                <element signature="e#2347#2348#0" expanded="true" />
-                <element signature="e#2396#2397#0" expanded="true" />
-                <element signature="e#2432#2433#0" expanded="true" />
-                <element signature="e#2465#2466#0" expanded="true" />
-                <element signature="e#2494#2495#0" expanded="true" />
-                <element signature="e#2538#2539#0" expanded="true" />
-                <element signature="e#2574#2575#0" expanded="true" />
-                <element signature="e#2633#2634#0" expanded="true" />
-                <element signature="e#2674#2675#0" expanded="true" />
-                <element signature="e#2854#2855#0" expanded="true" />
-                <element signature="e#2888#2889#0" expanded="true" />
-                <element signature="e#2942#2943#0" expanded="true" />
-                <element signature="e#2988#2989#0" expanded="true" />
-                <element signature="e#3021#3022#0" expanded="true" />
-                <element signature="e#3050#3051#0" expanded="true" />
-                <element signature="e#3094#3095#0" expanded="true" />
-                <element signature="e#3130#3131#0" expanded="true" />
-                <element signature="e#3164#3165#0" expanded="true" />
-                <element signature="e#3194#3195#0" expanded="true" />
-                <element signature="e#3240#3241#0" expanded="true" />
-                <element signature="e#3278#3279#0" expanded="true" />
-                <element signature="e#3314#3315#0" expanded="true" />
-                <element signature="e#3346#3347#0" expanded="true" />
-                <element signature="e#3396#3397#0" expanded="true" />
-                <element signature="e#3438#3439#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserNoteEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/entity/UserNoteEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="240">
+              <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/struts.xml">
-          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="postNote.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/postNote.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+            <state relative-caret-position="268">
+              <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="58" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserNoteEntityPK.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/entity/UserNoteEntityPK.java">
+      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="75" column="48" lean-forward="false" selection-start-line="75" selection-start-column="48" selection-end-line="80" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Global/footer.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="18" column="53" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e7f6882b-9454-4b85-b87c-24c399f8d1f7/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postNote.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/postNote.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="noteList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/noteList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="46" column="73" lean-forward="false" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -220,15 +249,45 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="struts_2_3" />
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>demo</find>
+      <find>page</find>
+      <find>fea</find>
+      <find>sess</find>
+      <find>home</find>
+      <find>getUrl</find>
+      <find>categor</find>
+      <find>s</find>
+      <find>search</find>
+      <find>submit</find>
+      <find>scroll-top</find>
+      <find>index</find>
+      <find>Tags</find>
+      <find>comment</find>
+      <find>Knowledge Base Theme</find>
+      <find>deleteClick</find>
+      <find>&lt;input class=&quot;btn&quot; name=&quot;submit&quot; type=&quot;submit&quot; id=&quot;comment_btn&quot; onclick=&quot;commentClick()&quot; value=&quot;提交评论&quot;&gt;</find>
+      <find>content</find>
+      <find>contentEditable</find>
+      <find>myNoteName</find>
+      <find>sql</find>
+      <find>note</find>
+      <find>noteTime</find>
+      <find>user</find>
+      <find>noteTIme</find>
+      <find>notetime</find>
+      <find>alert</find>
+      <find>Time</find>
+      <find>Reply</find>
+      <find>Comments</find>
+      <find>pre</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -242,41 +301,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tomax/dao/DaoManager.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/login.jsp" />
-        <option value="$PROJECT_DIR$/web/login.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/fail.jsp" />
-        <option value="$PROJECT_DIR$/src/com/tomax/dao/impl/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/tomax/service/impl/UserService.java" />
-        <option value="$PROJECT_DIR$/src/com/tomax/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/tomax/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/com/tomax/action/UserAction.java" />
-        <option value="$PROJECT_DIR$/src/com/tomax/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/cause/ResultCause.java" />
-        <option value="$PROJECT_DIR$/src/com/tomax/cause/ResultCause.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/DaoManager.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/userDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/userDao.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/spring.xml" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/action/UserAction.java" />
-        <option value="$PROJECT_DIR$/src/dbcp2.properties" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/396fb142-aa57-4e33-8915-7332f57f9677/console.sql" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/entity/NotelistEntity.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/entity/UsernoteEntityPK.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/NoteListDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/NoteDao.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/NoteDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/NoteService.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/action/NoteAction.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/UserNoteDao.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/UserNoteDao.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/CommentDao.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/action/NoteListAction.java" />
         <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/UserNoteService.java" />
-        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserNoteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/UserNoteDao.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/UserNoteDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/action/CommentAction.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/CommentService.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/action/SearchAction.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/CommentDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/NoteDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteListServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/entity/UserNoteEntity.java" />
         <option value="$PROJECT_DIR$/src/cn/vfvrpq/action/UserNoteAction.java" />
-        <option value="$PROJECT_DIR$/src/struts.xml" />
+        <option value="$PROJECT_DIR$/src/dbcp2.properties" />
+        <option value="$PROJECT_DIR$/JavaWebDemo.iml" />
+        <option value="$PROJECT_DIR$/lib/ojdbc6.jar!/oracle/jdbc/OracleDriver.class" />
+        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/web/js/postNote.js" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/action/UserAction.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e7f6882b-9454-4b85-b87c-24c399f8d1f7/console_2.sql" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/CommentServiceImpl.java" />
+        <option value="/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/schema/SCOTT/table/NOTE/trigger/BEF_INS_NOTE_TIME.sql" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/dao/DaoManager.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserNoteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/NoteService.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/vfvrpq/action/NoteAction.java" />
+        <option value="/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/schema/SCOTT/table/USERNOTE/trigger/BEF_INS_USERNOTE_TIME.sql" />
+        <option value="/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/schema/SCOTT/table/NOTE/trigger/BEF_UPDATE_NOTE.sql" />
+        <option value="/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/schema/SCOTT/table/NOTE/trigger/BEF_INS_NOTE.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e7f6882b-9454-4b85-b87c-24c399f8d1f7/console_3.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e7f6882b-9454-4b85-b87c-24c399f8d1f7/console.sql" />
+        <option value="$PROJECT_DIR$/web/Global/head.jsp" />
+        <option value="$PROJECT_DIR$/web/singleNote.jsp" />
+        <option value="$PROJECT_DIR$/web/js/noteList.js" />
+        <option value="$PROJECT_DIR$/web/noteList.jsp" />
+        <option value="$PROJECT_DIR$/web/js/singleNote.js" />
+        <option value="$PROJECT_DIR$/web/postNote.jsp" />
+        <option value="$PROJECT_DIR$/web/register.jsp" />
+        <option value="$PROJECT_DIR$/web/login.jsp" />
+        <option value="$PROJECT_DIR$/web/Global/footer.jsp" />
       </list>
     </option>
   </component>
@@ -293,22 +368,17 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -324,145 +394,62 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vfvrpq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vfvrpq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vfvrpq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaWebDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vfvrpq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="JavaWebDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaWebDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaWebDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaWebDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaWebDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaWebDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="Global" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaWebDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaWebDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaWebDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaWebDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaWebDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="JPA.DatabaseSchemaImportDialog" value="900f45f7-a601-4373-bc75-6e868e7d8e62" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Oracle&#10;MySQL" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="e7f6882b-9454-4b85-b87c-24c399f8d1f7" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -471,15 +458,21 @@
       <recent name="com.tomax.cause" />
       <recent name="com.tomax.dao" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="cn.vfvrpq.entity" />
-      <recent name="" />
-      <recent name="com.tomax.entity" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/js" />
       <recent name="$PROJECT_DIR$/src/cn/vfvrpq/service" />
       <recent name="C:\Users\Lenovo\Desktop\网站搭建材料\JavaWebDemo\lib" />
       <recent name="C:\Users\Lenovo\Desktop\网站搭建材料\JavaWebDemo\src" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="" />
+      <recent name="cn.vfvrpq.entity" />
+      <recent name="com.tomax.entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -495,23 +488,247 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.38">
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
+    <configuration name="Tomcat 8.0.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.38" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <deployment>
+        <artifact name="JavaWebDemo:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_0_38_JavaWebDemo" />
+      </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
       <predefined_log_file id="Tomcat Manager" enabled="false" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="25326" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="JavaWebDemo:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
@@ -558,55 +775,6 @@
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="">
@@ -664,55 +832,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -727,36 +846,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="depsClasspath" value="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
@@ -829,46 +918,10 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
@@ -899,13 +952,15 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -921,81 +976,6 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Tomcat 8.0.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.38" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <deployment>
-        <artifact name="JavaWebDemo:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_0_38_JavaWebDemo" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="25326" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="JavaWebDemo:war exploded" />
-        </option>
-      </method>
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 8.0.38" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1014,6 +994,16 @@
       <workItem from="1523975379738" duration="1266000" />
       <workItem from="1523976772365" duration="852000" />
       <workItem from="1524014302547" duration="4786000" />
+      <workItem from="1524040600939" duration="12300000" />
+      <workItem from="1524103388636" duration="712000" />
+      <workItem from="1524106340786" duration="18379000" />
+      <workItem from="1524145722432" duration="16675000" />
+      <workItem from="1524237878968" duration="9597000" />
+      <workItem from="1524252814663" duration="4983000" />
+      <workItem from="1528098928090" duration="954000" />
+      <workItem from="1528161385498" duration="638000" />
+      <workItem from="1529828922180" duration="34000" />
+      <workItem from="1530228046106" duration="25387000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1524014403576</created>
@@ -1022,49 +1012,155 @@
       <option name="project" value="LOCAL" />
       <updated>1524014403576</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="实现注册，登陆，发帖三个界面。">
+      <created>1524066135807</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524066135807</updated>
+    </task>
+    <task id="LOCAL-00003" summary="增加发帖操作&#10;以及帖子的一个模版">
+      <created>1524108854404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1524108854405</updated>
+    </task>
+    <task id="LOCAL-00004" summary="实现了帖子展示，个别帖子之间的切换。&#10;基本实现所有页面，剩下的是要整合。&#10;&#10;扩展了数据库，增加了两张视图">
+      <created>1524151547541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524151547541</updated>
+    </task>
+    <task id="LOCAL-00005" summary="noteList，将head和footer分离出去，并删去不必要的东西">
+      <created>1524236282215</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1524236282215</updated>
+    </task>
+    <task id="LOCAL-00006" summary="实现了帖子展示，个别帖子之间的切换。&#10;基本实现所有页面，剩下的是要整合。">
+      <created>1524236806863</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1524236806863</updated>
+    </task>
+    <task id="LOCAL-00007" summary="整合完成。实现注册，登录/登出，发贴，评论，搜索（贴子名称，内容，发帖人），查看最近的帖子功能。&#10;（仓促完成，还有点粗糙）&#10;&#10;剩余：点赞没做，个人信息。">
+      <created>1524245408369</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1524245408369</updated>
+    </task>
+    <task id="LOCAL-00008" summary="数据库，含有几个例子数据（从知乎上粘贴下来的）">
+      <created>1524245561792</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1524245561792</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <created>1524251456628</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1524251456628</updated>
+    </task>
+    <task id="LOCAL-00010" summary="增加发帖人的功能，能够删除自己发的帖子，也可以修改帖子">
+      <created>1524258489357</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1524258489357</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12719000" />
+    <option name="totallyTimeSpent" value="102378000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2881907" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.50429183" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13113007" sideWeight="0.27092847" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13113007" sideWeight="0.72907156" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28880596" sideWeight="0.25112107" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15895523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25679544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27811366" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31680775" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22031474" sideWeight="0.31858408" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.49570817" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22031474" sideWeight="0.6814159" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28880596" sideWeight="0.25112107" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15808298" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27811366" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.286578" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20886981" sideWeight="0.30847457" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20886981" sideWeight="0.6915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28880596" sideWeight="0.25112107" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1081,8 +1177,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="实现注册，登陆，发帖三个界面。" />
+    <MESSAGE value="增加发帖操作&#10;以及帖子的一个模版" />
+    <MESSAGE value="实现了帖子展示，个别帖子之间的切换。&#10;基本实现所有页面，剩下的是要整合。&#10;&#10;扩展了数据库，增加了两张视图" />
+    <MESSAGE value="noteList，将head和footer分离出去，并删去不必要的东西" />
+    <MESSAGE value="实现了帖子展示，个别帖子之间的切换。&#10;基本实现所有页面，剩下的是要整合。" />
+    <MESSAGE value="整合完成。实现注册，登录/登出，发贴，评论，搜索（贴子名称，内容，发帖人），查看最近的帖子功能。&#10;（仓促完成，还有点粗糙）&#10;&#10;剩余：点赞没做，个人信息。" />
+    <MESSAGE value="数据库，含有几个例子数据（从知乎上粘贴下来的）" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="增加发帖人的功能，能够删除自己发的帖子，也可以修改帖子" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加发帖人的功能，能够删除自己发的帖子，也可以修改帖子" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1103,340 +1207,414 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/service/UserService.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/action/UserAction.java" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/283e0b2e-0fbf-45cb-88fa-4bdf0d2b64f1/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/entity/UserEntity.java" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/login.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/fail.jsp">
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/UserAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="259">
+          <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/commons-codec-1.10/apidocs/org/apache/commons/codec/net/class-use/BCodec.html" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="dbSrc:///2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/schema/SCOTT/table/NOTE/trigger/BEF_INS_NOTE_TIME.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/register.jsp">
+    <entry file="jar://$PROJECT_DIR$/lib/Spring-4.3.4.RELEASE/spring-jdbc-4.3.4.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="54">
+          <caret line="180" column="0" lean-forward="true" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/DaoManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/action/UserAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/service/UserService.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/service/impl/UserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/bbs.iml" />
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/cause/ResultCause.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/cause/ResultCause.java" />
-    <entry file="das://table:/2d51dd3b/e348793f-930b-40cd-b1f0-48db50b20471/bulletin.note" />
-    <entry file="das://table:/2d51dd3b/e348793f-930b-40cd-b1f0-48db50b20471/bulletin.user" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e348793f-930b-40cd-b1f0-48db50b20471/console.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/900f45f7-a601-4373-bc75-6e868e7d8e62/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/entity/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="135">
+          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/entity/NoteEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/dao/DaoManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/DaoManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="-75">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/dao/UserDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tomax/dao/impl/UserDaoImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/res/demo.sql">
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/cause/ResultCause.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding>
-            <element signature="e#367#368#0" expanded="false" />
-            <element signature="e#428#429#0" expanded="false" />
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/2d51dd3b/900f45f7-a601-4373-bc75-6e868e7d8e62/bulletin.user" />
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/NoteDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="e#417#418#0" expanded="false" />
-            <element signature="e#478#479#0" expanded="false" />
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#614#615#0" expanded="false" />
-            <element signature="e#687#688#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
-            <element signature="e#801#802#0" expanded="false" />
-            <element signature="e#845#846#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaWebDemo.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        <state relative-caret-position="75">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dbcp2.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="105">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/UserAction.java">
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="150">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/web/js/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/NoteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="53" />
+        <state relative-caret-position="161">
+          <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/UserNoteDao.java">
+    <entry file="file://$PROJECT_DIR$/out/production/JavaWebDemo/res/bulletin.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/UserNoteDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/NoteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="-2300">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/UserNoteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="45" column="5" selection-start-line="44" selection-start-column="20" selection-end-line="45" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/entity/UserNoteEntityPK.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/NoteAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/entity/UserNoteEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/CommentDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/SearchAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="53" lean-forward="false" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/impl/CommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteListServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="36" column="61" lean-forward="true" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/impl/UserNoteServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        <state relative-caret-position="421">
+          <caret line="59" column="80" lean-forward="false" selection-start-line="59" selection-start-column="80" selection-end-line="59" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/UserNoteAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="25" />
+        <state relative-caret-position="270">
+          <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/UserNoteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="120" lean-forward="false" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/NoteListAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbSrc:///2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/schema/SCOTT/table/USERNOTE/trigger/BEF_INS_USERNOTE_TIME.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbSrc:///2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/schema/SCOTT/table/NOTE/trigger/BEF_UPDATE_NOTE.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/SCOTT.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e7f6882b-9454-4b85-b87c-24c399f8d1f7/console_4.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e7f6882b-9454-4b85-b87c-24c399f8d1f7/console_3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/SCOTT.USERNOTE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://sequence:/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/SCOTT.S_NOTEID">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbSrc:///2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/schema/SCOTT/table/NOTE/trigger/BEF_INS_NOTE.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/CommentAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/action/NoteAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/NoteListService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/NoteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/service/impl/NoteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="77" column="22" lean-forward="false" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/NoteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/dao/impl/NoteDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="26" />
           <folding>
-            <element signature="e#2117#2118#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#2280#2281#0" expanded="true" />
-            <element signature="e#2318#2319#0" expanded="true" />
-            <element signature="e#2347#2348#0" expanded="true" />
-            <element signature="e#2396#2397#0" expanded="true" />
-            <element signature="e#2432#2433#0" expanded="true" />
-            <element signature="e#2465#2466#0" expanded="true" />
-            <element signature="e#2494#2495#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
-            <element signature="e#2574#2575#0" expanded="true" />
-            <element signature="e#2633#2634#0" expanded="true" />
-            <element signature="e#2674#2675#0" expanded="true" />
-            <element signature="e#2854#2855#0" expanded="true" />
-            <element signature="e#2888#2889#0" expanded="true" />
-            <element signature="e#2942#2943#0" expanded="true" />
-            <element signature="e#2988#2989#0" expanded="true" />
-            <element signature="e#3021#3022#0" expanded="true" />
-            <element signature="e#3050#3051#0" expanded="true" />
-            <element signature="e#3094#3095#0" expanded="true" />
-            <element signature="e#3130#3131#0" expanded="true" />
-            <element signature="e#3164#3165#0" expanded="true" />
-            <element signature="e#3194#3195#0" expanded="true" />
-            <element signature="e#3240#3241#0" expanded="true" />
-            <element signature="e#3278#3279#0" expanded="true" />
-            <element signature="e#3314#3315#0" expanded="true" />
-            <element signature="e#3346#3347#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3438#3439#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/vfvrpq/entity/CommentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://view:/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/SCOTT.comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Global/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-481">
+          <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://view:/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/SCOTT.NOTELIST">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/2d51dd3b/e7f6882b-9454-4b85-b87c-24c399f8d1f7/SCOTT.NOTE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/logout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/singleNote.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="58" column="66" lean-forward="false" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/noteList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="46" column="73" lean-forward="false" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/singleNote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="60" column="117" lean-forward="false" selection-start-line="60" selection-start-column="117" selection-end-line="60" selection-end-column="117" />
+          <folding>
+            <marker date="1530434318560" expanded="true" signature="2062:2068" ph="&amp;nbsp;" />
+            <marker date="1530434318560" expanded="true" signature="2068:2074" ph="&amp;nbsp;" />
+            <marker date="1530434318560" expanded="true" signature="2258:2264" ph="&amp;nbsp;" />
+            <marker date="1530434318560" expanded="true" signature="2264:2270" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/postNote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/postNote.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="58" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/noteList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="75" column="48" lean-forward="false" selection-start-line="75" selection-start-column="48" selection-end-line="80" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Global/footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="18" column="53" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e7f6882b-9454-4b85-b87c-24c399f8d1f7/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1459,7 +1637,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring</last-edited>
+          <last-edited>Hibernate</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1495,7 +1673,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|JavaWebDemo</last-edited>
+          <last-edited>Web|JavaWebDemo</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1507,7 +1685,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>antlr-2.7.7</last-edited>
+          <last-edited>Spring-4.3.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

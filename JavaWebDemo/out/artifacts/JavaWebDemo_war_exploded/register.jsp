@@ -1,22 +1,102 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 2017/6/25
-  Time: 21:00
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>注册</title>
-  </head>
-  <body>
-        <form action="user_register.action" method="post">
-            <label>用户名</label>
-            <input type="text" placeholder="username" name="username">
-            <label>密码</label>
-            <input type="password" placeholder="password" name="password">
-            <input type="submit" value="注册账户">
-        </form>
-  </body>
-</html>
+<%@ page contentType="text/html;charset=utf-8" %>
+<jsp:include page="Global/head.jsp?currentMenuItem=register"></jsp:include>
+
+                <!-- Start of Page Container -->
+                <div class="page-container">
+                        <div class="container">
+                                <div class="row">
+
+                                        <!-- start of page content -->
+                                        <div class="span8 page-content">
+
+                                                <article class="type-page hentry clearfix">
+                                                        <h1 class="post-title">
+                                                                <a href="#">注册</a>
+                                                        </h1>
+                                                        <hr>
+                                                        <p>请填写以下信息，打*的表示必填</p>
+                                                </article>
+
+
+                                                <form id="contact-form" class="row">
+
+                                                    <div class="span2">
+                                                        <label for="userId_input">学号/工号 <span>*</span> </label>
+                                                    </div>
+                                                    <div class="span6">
+                                                        <input type="text" id="userId_input" class="required input-xlarge" title="* 请输入用户名">
+                                                    </div>
+
+                                                    <div class="span2">
+                                                        <label for="userName_input">昵称 <span>*</span> </label>
+                                                    </div>
+                                                    <div class="span6">
+                                                        <input type="text" id="userName_input" class="required input-xlarge" title="* 请输入昵称">
+                                                    </div>
+
+                                                    <div class="span2">
+                                                        <label for="userSex_input_bm">性别 <span>*</span> </label>
+                                                    </div>
+                                                    <div class="span6 bm30">
+                                                            <input type="radio" name="userSex" id="userSex_input_bm" value="保密" checked>&nbsp;保密&nbsp;&nbsp;&nbsp;
+                                                            <input type="radio" name="userSex" id="userSex_input_male" value="男">&nbsp;男&nbsp;&nbsp;&nbsp;
+                                                            <input type="radio" name="userSex" id="userSex_input_female" value="女">&nbsp;女
+                                                    </div>
+
+                                                    <div class="span2">
+                                                        <label for="userType_input_student">类型 <span>*</span> </label>
+                                                    </div>
+                                                    <div class="span6 bm30">
+                                                            <input type="radio" name="userType" id="userType_input_student" value="学生" checked>&nbsp;学生&nbsp;&nbsp;&nbsp;
+                                                            <input type="radio" name="userType" id="userType_input_teacher" value="老师">&nbsp;老师
+                                                    </div>
+
+                                                    <div class="span2">
+                                                        <label for="userPwd_input">密码<span>*</span> </label>
+                                                    </div>
+                                                    <div class="span6">
+                                                        <input type="password" id="userPwd_input" class="required input-xlarge" title="* 请输入密码">
+                                                    </div>
+
+                                                    <div class="span6 offset2 bm30">
+                                                        <input type="submit" name="submit" value="注册" class="btn btn-inverse"  id="btn_login">
+                                                        <img src="images/loading.gif" id="contact-loader" alt="Loading...">
+
+                                                        <div class="span6 offset2 error-container"></div>
+                                                        <div class="span8 offset2" id="message-sent"></div>
+
+                                                </form>
+                                        </div>
+                                        <!-- end of page content -->
+
+
+                                        <!-- start of sidebar -->
+                                        <aside class="span4 page-sidebar">
+
+                                                <section class="widget">
+                                                    <div class="support-widget">
+                                                        <h3 class="title">帮助</h3>
+                                                        <p class="intro">需要帮助吗？请联系我们<a href="mailto:admin@vfvrpq.cn">admin@vfvrpq.cn</a></p>
+                                                    </div>
+                                                </section>
+
+                                        </aside>
+                                        <!-- end of sidebar -->
+                                </div>
+                        </div>
+                </div>
+                <!-- End of Page Container -->
+
+                <!-- script -->
+                <script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
+                <script type='text/javascript' src='js/jquery.easing.1.34e44.js?ver=1.3'></script>
+                <script type='text/javascript' src='js/prettyphoto/jquery.prettyPhotoaeb9.js?ver=3.1.4'></script>
+                <script type='text/javascript' src='js/jquery.liveSearchd5f7.js?ver=2.0'></script>
+				<script type='text/javascript' src='js/jflickrfeed.js'></script>
+                <script type='text/javascript' src='js/jquery.formd471.js?ver=3.18'></script>
+                <script type='text/javascript' src='js/jquery.validate.minfc6b.js?ver=1.10.0'></script>
+                <script type='text/javascript' src='js/custom5152.js?ver=1.0'></script>
+                <script type='text/javascript' src="js/register.js"></script>
+                <script type='text/javascript' src="Global/global.js"></script>
+
+<jsp:include page="Global/footer.jsp" />

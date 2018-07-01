@@ -15,7 +15,7 @@ public class CommentServiceImpl implements CommentService{
 
     @Override
     public List<CommentEntity> getData(String noteId) {
-        String sql = "select * from comment where noteId = ? order by floorTime ASC";
+        String sql = "select * from \"comment\" where noteId = ? order by floorTime ASC";
         return commentDao.getData(sql, new Object[]{noteId});
     }
 }

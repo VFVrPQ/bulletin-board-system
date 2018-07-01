@@ -6,6 +6,7 @@ import cn.vfvrpq.service.NoteService;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
+import java.sql.Time;
 import java.util.List;
 
 /**
@@ -30,7 +31,8 @@ public class NoteAction {
         return "DEL_SUCCESS";
     }
 
-    private String noteNumber,noteName,noteType,noteOwner,noteTime;
+    private String noteNumber,noteName,noteType,noteOwner;
+    private String noteTime;
     public String updateData(){
         //updateData(String noteId, String noteNumber, String noteName, String noteType, String noteOwner)
         if (noteService.updateData(noteId,noteNumber,noteName,noteType,noteOwner,noteTime)) {
@@ -42,15 +44,17 @@ public class NoteAction {
     }
 
     public String addData(){
+        //System.out.println(noteName + "," + noteNumber + "," + noteType + "," + noteOwner);
         NoteEntity noteEntity = new NoteEntity();
         //noteEntity.setNoteId(Integer.parseInt(noteId));
         noteEntity.setNoteName(noteName);
         noteEntity.setNoteNumber(noteNumber);
         noteEntity.setNoteType(noteType);
         noteEntity.setNoteOwner(noteOwner);
-        noteEntity.setNoteTime(noteTime);
+
+        //noteEntity.setNoteTime(noteTime);
         if (noteService.addData(noteEntity)){
-            //result.setCause("200", "ADD_SUCCESS");
+            result.setCause("200", "ADD_SUCCESS");
             noteEntityList = noteService.getDataByOthers(noteNumber, noteName, noteType, noteOwner, noteTime);
             return "ADD_SUCCESS";
         }else{
@@ -171,4 +175,5 @@ public class NoteAction {
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 }
